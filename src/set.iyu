@@ -1,0 +1,992 @@
+<View id="1" did="0" type="RelativeLayout">
+<ppt>width=-1
+height=-1
+.padding=65dp
+layout_weight=1</ppt>
+<event></event>
+</View>
+<View id="36" did="1" type="ScrollView">
+<ppt>width=-1
+height=-1
+.layout_marginTop=40dp
+layout_marginBottom=70dp
+layout_marginTop=25dp</ppt>
+<event></event>
+</View>
+<View id="17" did="36" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+.BackgroundColor=#a8ffffff</ppt>
+<event></event>
+</View>
+<View id="21" did="17" type="CardView">
+<ppt>width=-1
+height=-2
+layout_marginLeft=10dp
+layout_marginRight=10dp
+app_CardcornerRadius=5dp</ppt>
+<event></event>
+</View>
+<View id="78" did="21" type="LinearLayout">
+<ppt>width=-2
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="81" did="78" type="LinearLayout">
+<ppt>width=-1
+height=55dp
+orientation=vertical
+background=selectableitem
+clickable=true</ppt>
+<event><eventItme type="clicki">ug(set.79,"visibility",ks)
+gvs(set.87,tu)
+f(ks==8){
+us(set.79,"visibility","visible")
+java(null,tu,"android.view.View.setRotation","float",90)
+endcode
+}
+us(set.79,"visibility","gone")
+java(null,tu,"android.view.View.setRotation","float",0)</eventItme></event>
+</View>
+<View id="83" did="81" type="RelativeLayout">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="84" did="83" type="LinearLayout">
+<ppt>width=-2
+height=55dp
+orientation=vertical
+gravity=center_vertical</ppt>
+<event></event>
+</View>
+<View id="85" did="84" type="TextView">
+<ppt>width=-2
+height=-2
+text=个性化设置
+textColor=#000000
+layout_marginLeft=10dp</ppt>
+<event></event>
+</View>
+<View id="87" did="83" type="ImageView">
+<ppt>width=55dp
+height=55dp
+src=@icon_gray/ic_navigate_next_grey600_24dp.png
+ut_centerVertical=true
+ut_alignParentRight=true
+.layout_marginRight=15dp
+.layout_margintop=-39dp
+.layout_marginleft=6dp
+.scaleType=center
+padding=17dp</ppt>
+<event></event>
+</View>
+<View id="79" did="78" type="LinearLayout">
+<ppt>width=-2
+height=-2
+orientation=vertical
+visibility=gone</ppt>
+<event></event>
+</View>
+<View id="22" did="79" type="RelativeLayout">
+<ppt>width=-1
+height=-1
+background=selectableitem</ppt>
+<event></event>
+</View>
+<View id="25" did="22" type="LinearLayout">
+<ppt>width=-1
+height=55dp
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="29" did="25" type="RelativeLayout">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="30" did="29" type="LinearLayout">
+<ppt>width=-2
+height=55dp
+orientation=vertical
+gravity=center_vertical</ppt>
+<event></event>
+</View>
+<View id="31" did="30" type="TextView">
+<ppt>width=-2
+height=-2
+text=账号列表头像
+textColor=#000000
+layout_marginLeft=10dp</ppt>
+<event></event>
+</View>
+<View id="32" did="30" type="TextView">
+<ppt>width=-2
+height=-2
+text=自定义账号列表头像
+layout_marginLeft=10dp</ppt>
+<event></event>
+</View>
+<View id="34" did="29" type="TextView">
+<ppt>width=-1
+height=2dp
+text=
+background=#ff83b2ff
+layout_margintop=4dp
+ut_alignParentBottom=true
+ut_toRightOf=30
+layout_marginRight=8dp
+layout_marginLeft=14dp
+layout_marginBottom=8dp
+layout_marginTop=8dp</ppt>
+<event></event>
+</View>
+<View id="33" did="29" type="EditText">
+<ppt>width=-1
+height=56dp
+text=
+hint=未设置头像，将使用默认图片
+paddingtop=24dp
+background=
+textsize=14sp
+singleline=true
+focusable=true
+focusableintouchmode=true
+ut_toRightOf=30
+layout_marginLeft=13dp
+layout_marginRight=8dp
+layout_marginBottom=15dp
+cursorVisible=false
+layout_marginRight=180dp</ppt>
+<event></event>
+</View>
+<View id="61" did="29" type="Button">
+<ppt>width=85dp
+height=-2
+text=保存
+ut_alignParentRight=true
+layout_marginRight=5dp</ppt>
+<event><eventItme type="clicki">ug(set.33, "text", t1)
+f(t1 == "null" || t1 == ".")
+{
+	fn md.tw("保存失败，请重新选择图片文件")
+}
+else
+{
+	fw("%Android/data/com.jiuxia.boat.launcher.pro/data/file/resources/avatar.txt",t1)
+    fn md.tw("保存成功")
+}
+
+
+
+</eventItme></event>
+</View>
+<View id="88" did="29" type="Button">
+<ppt>width=85dp
+height=-2
+text=选择
+ut_toLeftOf=61</ppt>
+<event><eventItme type="clicki">
+javags(agc,"android.content.Intent","android.content.Intent.ACTION_GET_CONTENT")
+javanew(it,"android.content.Intent","String",agc)
+
+java(c,it,"android.content.Intent.setType","String","*/*")
+
+javags(ca,"android.content.Intent","android.content.Intent.CATEGORY_OPENABLE")
+java(c,it,"android.content.Intent.addCategory","String",ca)
+
+java(c,activity,"android.app.Activity.startActivityForResult","android.content.Intent",it,"int",1)
+
+</eventItme></event>
+</View>
+<View id="37" did="22" type="LinearLayout">
+<ppt>width=-1
+height=55dp
+orientation=vertical
+layout_marginTop=55dp</ppt>
+<event></event>
+</View>
+<View id="38" did="37" type="RelativeLayout">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="39" did="38" type="LinearLayout">
+<ppt>width=-2
+height=55dp
+orientation=vertical
+gravity=center_vertical</ppt>
+<event></event>
+</View>
+<View id="40" did="39" type="TextView">
+<ppt>width=-2
+height=-2
+text=首页背景图片
+textColor=#000000
+layout_marginLeft=10dp</ppt>
+<event></event>
+</View>
+<View id="41" did="39" type="TextView">
+<ppt>width=-2
+height=-2
+text=自定义首页界面背景图
+layout_marginLeft=10dp</ppt>
+<event></event>
+</View>
+<View id="42" did="38" type="TextView">
+<ppt>width=-1
+height=2dp
+text=
+background=#ff83b2ff
+layout_margintop=4dp
+ut_alignParentBottom=true
+ut_toRightOf=39
+layout_marginRight=8dp
+layout_marginLeft=8dp
+layout_marginBottom=8dp
+layout_marginTop=8dp</ppt>
+<event></event>
+</View>
+<View id="43" did="38" type="EditText">
+<ppt>width=-1
+height=56dp
+text=
+hint=未设置背景图，将使用默认图片
+paddingtop=24dp
+background=
+textsize=14sp
+singleline=true
+focusable=true
+focusableintouchmode=true
+ut_toRightOf=39
+layout_marginLeft=8dp
+layout_marginRight=8dp
+layout_marginBottom=15dp
+cursorVisible=false
+layout_marginRight=180dp</ppt>
+<event></event>
+</View>
+<View id="62" did="38" type="Button">
+<ppt>width=85dp
+height=-2
+text=保存
+ut_alignParentRight=true
+layout_marginRight=5dp</ppt>
+<event><eventItme type="clicki">ug(set.43, "text", t2)
+f(t2 == "null" || t2 == ".")
+{
+	fn md.tw("保存失败，请重新选择图片文件")
+}
+else
+{
+	fw("%Android/data/com.jiuxia.boat.launcher.pro/data/file/resources/background.txt",t2)
+    fn md.tw("保存成功")
+}
+
+
+
+
+
+
+</eventItme></event>
+</View>
+<View id="89" did="38" type="Button">
+<ppt>width=85dp
+height=-2
+text=选择
+ut_toLeftOf=62</ppt>
+<event><eventItme type="clicki">
+javags(agc,"android.content.Intent","android.content.Intent.ACTION_GET_CONTENT")
+javanew(it,"android.content.Intent","String",agc)
+
+java(c,it,"android.content.Intent.setType","String","*/*")
+
+javags(ca,"android.content.Intent","android.content.Intent.CATEGORY_OPENABLE")
+java(c,it,"android.content.Intent.addCategory","String",ca)
+
+java(c,activity,"android.app.Activity.startActivityForResult","android.content.Intent",it,"int",2)
+
+</eventItme></event>
+</View>
+<View id="45" did="22" type="LinearLayout">
+<ppt>width=-1
+height=55dp
+orientation=vertical
+layout_marginTop=110dp</ppt>
+<event></event>
+</View>
+<View id="46" did="45" type="RelativeLayout">
+<ppt>width=-1
+height=-1
+layout_margintop=3dp
+layout_marginleft=-12dp</ppt>
+<event></event>
+</View>
+<View id="48" did="46" type="LinearLayout">
+<ppt>width=-2
+height=55dp
+orientation=vertical
+gravity=center_vertical
+layout_marginLeft=10dp</ppt>
+<event></event>
+</View>
+<View id="49" did="48" type="TextView">
+<ppt>width=-2
+height=-2
+text=首页圆形头像
+textColor=#000000
+layout_marginLeft=10dp</ppt>
+<event></event>
+</View>
+<View id="50" did="48" type="TextView">
+<ppt>width=-2
+height=-2
+text=自定义头像显示效果
+layout_marginLeft=10dp</ppt>
+<event></event>
+</View>
+<View id="52" did="46" type="SwitchCompat">
+<ppt>width=-2
+height=-2
+ut_alignParentRight=true
+layout_marginTop=10dp
+layout_marginBottom=10dp
+layout_marginRight=10dp</ppt>
+<event><eventItme type="clicki">ug(set.52,"checked",x)
+f(x==false){
+us(set.52,"checked",false)
+syso("关")
+fw("%Android/data/com.jiuxia.boat.launcher.pro/data/file/setting/avatar.txt", "square")
+us(62, "visibility","visible")
+us(26, "visibility","gone")
+fn md.tw("方形头像设置成功")
+endcode
+}
+us(set.52,"checked",true)
+syso("开")
+fw("%Android/data/com.jiuxia.boat.launcher.pro/data/file/setting/avatar.txt", "circular")
+fn md.tw("圆形头像设置成功")
+us(62, "visibility","gone")
+us(26, "visibility","visible")
+
+</eventItme></event>
+</View>
+<View id="53" did="17" type="CardView">
+<ppt>width=-1
+height=-2
+layout_marginLeft=10dp
+layout_marginRight=10dp
+layout_marginTop=10dp
+app_CardcornerRadius=5dp
+layout_margintop=5dp
+layout_marginleft=10dp</ppt>
+<event></event>
+</View>
+<View id="65" did="53" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="55" did="65" type="LinearLayout">
+<ppt>width=-1
+height=55dp
+orientation=vertical
+background=selectableitem
+clickable=true</ppt>
+<event><eventItme type="clicki">ug(set.77,"visibility",ks)
+gvs(set.63,tu)
+f(ks==8){
+us(set.77,"visibility","visible")
+java(null,tu,"android.view.View.setRotation","float",90)
+endcode
+}
+us(set.77,"visibility","gone")
+java(null,tu,"android.view.View.setRotation","float",0)</eventItme></event>
+</View>
+<View id="56" did="55" type="RelativeLayout">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="57" did="56" type="LinearLayout">
+<ppt>width=-2
+height=55dp
+orientation=vertical
+gravity=center_vertical</ppt>
+<event></event>
+</View>
+<View id="58" did="57" type="TextView">
+<ppt>width=-2
+height=-2
+text=启动方式
+textColor=#000000
+layout_marginLeft=10dp</ppt>
+<event></event>
+</View>
+<View id="63" did="56" type="ImageView">
+<ppt>width=55dp
+height=55dp
+src=@icon_gray/ic_navigate_next_grey600_24dp.png
+ut_centerVertical=true
+ut_alignParentRight=true
+.layout_marginRight=15dp
+.layout_margintop=-39dp
+.layout_marginleft=6dp
+.scaleType=center
+padding=17dp</ppt>
+<event></event>
+</View>
+<View id="77" did="65" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+.visibility=gone</ppt>
+<event></event>
+</View>
+<View id="66" did="77" type="LinearLayout">
+<ppt>width=-1
+height=48dp
+background=#ffffff
+backgroundripple=#21000000
+gravity=center_vertical
+clickable=true
+background=selectableitem</ppt>
+<event><eventItme type="clicki">/.
+开发者:JiuXia2025，QQ2025226181
+开源地址:https://github.com/JiuXia2025/Boat_Launcher
+开源协议:MIT
+个人主页:http://www.9xia.top
+注意:参考性大于实用性,因某些原因项目核心部分代码已删除,尊重劳动成果使用时请注明来自@JiuXia2025
+删除的内容:启动游戏部分(内置启动与外置启动),九夏云中心,游戏账号管理,正版登录与外置登录
+./
+us(set.67,"checked",true)
+us(set.71,"checked",false)
+fw("%Android/data/com.jiuxia.boat.launcher.pro/data/file/setting/switch.txt", "boatapp")
+fn md.tw("切换外置启动成功")</eventItme></event>
+</View>
+<View id="67" did="66" type="RadioButton">
+<ppt>text=
+layout_marginleft=10dp
+layout_marginright=20dp
+checked=true
+clickable=false
+focusable=false
+focusableintouchmode=false
+background=#00000000</ppt>
+<event></event>
+</View>
+<View id="68" did="66" type="TextView">
+<ppt>text=内置启动
+textcolor=#cc000000
+textsize=14sp
+layout_weight=1</ppt>
+<event></event>
+</View>
+<View id="69" did="66" type="TextView">
+<ppt>text=MCBL Client
+layout_marginright=10dp
+textcolor=#7f000000
+textsize=12sp
+layout_marginRight=10dp</ppt>
+<event></event>
+</View>
+<View id="70" did="77" type="LinearLayout">
+<ppt>width=-1
+height=48dp
+background=#ffffff
+backgroundripple=#21000000
+gravity=center_vertical</ppt>
+<event><eventItme type="clicki">
+us(set.67,"checked",false)
+us(set.71,"checked",true)
+fw("%Android/data/com.jiuxia.boat.launcher.pro/data/file/setting/switch.txt", "boat launcher")
+fn md.tw("切换内置启动成功")
+</eventItme></event>
+</View>
+<View id="71" did="70" type="RadioButton">
+<ppt>text=
+layout_marginleft=10dp
+layout_marginright=20dp
+clickable=false
+focusable=false
+focusableintouchmode=false
+background=#00000000</ppt>
+<event></event>
+</View>
+<View id="72" did="70" type="TextView">
+<ppt>text=外置启动
+textcolor=#cc000000
+textsize=14sp
+layout_weight=1</ppt>
+<event></event>
+</View>
+<View id="73" did="70" type="TextView">
+<ppt>text=BoatApp
+layout_marginright=10dp
+textcolor=#7f000000
+textsize=12sp
+layout_marginRight=10dp</ppt>
+<event></event>
+</View>
+<View id="76" did="77" type="LinearLayout">
+<ppt>width=-2
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="75" did="76" type="TextView">
+<ppt>width=-2
+height=-2
+text=隔离启动将会与BoatApp的配置文件隔离生成一份新的启动配置文件用于支持隔离启动的启动器
+layout_marginLeft=10dp
+layout_marginTop=8dp
+layout_marginBottom=8dp
+layout_marginRight=10dp
+layout_margintop=6dp
+layout_marginleft=10dp</ppt>
+<event></event>
+</View>
+<View id="90" did="17" type="CardView">
+<ppt>width=-1
+height=-2
+layout_marginLeft=10dp
+layout_marginRight=10dp
+layout_marginTop=10dp
+app_CardcornerRadius=5dp
+layout_margintop=5dp
+layout_marginleft=10dp
+visibility=gone</ppt>
+<event></event>
+</View>
+<View id="117" did="90" type="LinearLayout">
+<ppt>width=-2
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="92" did="117" type="LinearLayout">
+<ppt>width=-1
+height=55dp
+orientation=vertical
+background=selectableitem
+clickable=true</ppt>
+<event><eventItme type="clicki">/.
+ug(set.91,"visibility",ks)
+gvs(set.97,tu)
+f(ks==8){
+us(set.91,"visibility","visible")
+java(null,tu,"android.view.View.setRotation","float",90)
+endcode
+}
+us(set.91,"visibility","gone")
+java(null,tu,"android.view.View.setRotation","float",0)
+./
+fn md.tw("离线模式下无法使用账号功能")</eventItme></event>
+</View>
+<View id="93" did="92" type="RelativeLayout">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="94" did="93" type="LinearLayout">
+<ppt>width=-2
+height=55dp
+orientation=vertical
+gravity=center_vertical</ppt>
+<event></event>
+</View>
+<View id="95" did="94" type="TextView">
+<ppt>width=-2
+height=-2
+text=Boat Launcher账号
+textColor=#000000
+layout_marginLeft=10dp</ppt>
+<event></event>
+</View>
+<View id="97" did="93" type="ImageView">
+<ppt>width=55dp
+height=55dp
+src=@icon_gray/ic_navigate_next_grey600_24dp.png
+ut_centerVertical=true
+ut_alignParentRight=true
+.layout_marginRight=15dp
+.layout_margintop=-39dp
+.layout_marginleft=6dp
+.scaleType=center
+padding=17dp</ppt>
+<event></event>
+</View>
+<View id="91" did="117" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+visibility=gone</ppt>
+<event></event>
+</View>
+<View id="98" did="91" type="LinearLayout">
+<ppt>width=-1
+height=48dp
+background=#ffffff
+backgroundripple=#21000000
+gravity=center_vertical
+clickable=true
+background=selectableitem</ppt>
+<event></event>
+</View>
+<View id="99" did="98" type="TextView">
+<ppt>text=账号
+layout_weight=1
+layout_marginleft=10dp
+textcolor=#cc000000
+textsize=14sp</ppt>
+<event></event>
+</View>
+<View id="100" did="98" type="TextView">
+<ppt>text=Null
+textcolor=#ff83b2ff
+textsize=12sp
+layout_marginright=16dp</ppt>
+<event></event>
+</View>
+<View id="113" did="91" type="LinearLayout">
+<ppt>width=-1
+height=48dp
+background=#ffffff
+backgroundripple=#21000000
+gravity=center_vertical
+clickable=true
+background=selectableitem</ppt>
+<event></event>
+</View>
+<View id="114" did="113" type="TextView">
+<ppt>text=昵称
+layout_weight=1
+layout_marginleft=10dp
+textcolor=#cc000000
+textsize=14sp</ppt>
+<event></event>
+</View>
+<View id="118" did="113" type="TextView">
+<ppt>text=Null
+textcolor=#ff83b2ff
+textsize=12sp
+layout_marginright=16dp</ppt>
+<event></event>
+</View>
+<View id="101" did="91" type="LinearLayout">
+<ppt>width=-1
+height=48dp
+background=#ffffff
+backgroundripple=#21000000
+gravity=center_vertical
+clickable=true
+background=selectableitem</ppt>
+<event><eventItme type="clicki">fn md.tw("权限不足，无法修改认证")</eventItme></event>
+</View>
+<View id="102" did="101" type="TextView">
+<ppt>text=认证
+layout_weight=1
+layout_marginleft=10dp
+textcolor=#cc000000
+textsize=14sp</ppt>
+<event></event>
+</View>
+<View id="103" did="101" type="TextView">
+<ppt>text=Null
+textcolor=#ff83b2ff
+textsize=12sp
+layout_marginright=16dp</ppt>
+<event></event>
+</View>
+<View id="104" did="91" type="LinearLayout">
+<ppt>width=-1
+height=48dp
+background=#ffffff
+backgroundripple=#21000000
+gravity=center_vertical
+clickable=true
+background=selectableitem</ppt>
+<event></event>
+</View>
+<View id="105" did="104" type="TextView">
+<ppt>text=余额
+layout_weight=1
+layout_marginleft=10dp
+textcolor=#cc000000
+textsize=14sp</ppt>
+<event></event>
+</View>
+<View id="119" did="104" type="TextView">
+<ppt>text=Null
+textcolor=#ff83b2ff
+textsize=12sp
+layout_marginright=16dp</ppt>
+<event></event>
+</View>
+<View id="106" did="91" type="LinearLayout">
+<ppt>width=-1
+height=48dp
+background=#ffffff
+backgroundripple=#21000000
+gravity=center_vertical
+clickable=true
+background=selectableitem</ppt>
+<event></event>
+</View>
+<View id="107" did="106" type="TextView">
+<ppt>text=积分
+layout_weight=1
+layout_marginleft=10dp
+textcolor=#cc000000
+textsize=14sp</ppt>
+<event></event>
+</View>
+<View id="120" did="106" type="TextView">
+<ppt>text=Null
+textcolor=#ff83b2ff
+textsize=12sp
+layout_marginright=16dp</ppt>
+<event></event>
+</View>
+<View id="108" did="91" type="LinearLayout">
+<ppt>width=-1
+height=48dp
+background=#ffffff
+backgroundripple=#21000000
+gravity=center_vertical
+clickable=true
+background=selectableitem</ppt>
+<event><eventItme type="clicki">ss("将于"+sss.day+"天后到期",tw)
+fn md.tw(tw)</eventItme></event>
+</View>
+<View id="109" did="108" type="TextView">
+<ppt>text=内测到期时间
+layout_weight=1
+layout_marginleft=10dp
+textcolor=#cc000000
+textsize=14sp
+
+</ppt>
+<event></event>
+</View>
+<View id="121" did="108" type="TextView">
+<ppt>text=Null
+textcolor=#ff83b2ff
+textsize=12sp
+layout_marginright=16dp</ppt>
+<event></event>
+</View>
+<View id="110" did="91" type="LinearLayout">
+<ppt>width=-1
+height=48dp
+background=#ffffff
+backgroundripple=#21000000
+gravity=center_vertical
+clickable=true
+background=selectableitem</ppt>
+<event></event>
+</View>
+<View id="111" did="110" type="TextView">
+<ppt>text=今天还没有签到哦
+layout_weight=1
+layout_marginleft=10dp
+textcolor=#cc000000
+textsize=14sp</ppt>
+<event></event>
+</View>
+<View id="112" did="110" type="Button">
+<ppt>width=-2
+height=40dp
+text=签到</ppt>
+<event><eventItme type="clicki">//签到功能可以设置赠送积分余额vip，后台也可以关闭签到功能
+
+
+t()
+{
+
+ss(sss.key+sss.user+sss.pass+sss.token,token)
+call(token, "mjava", "token.md5",token)
+
+ss(sss.server+"user_info.json?type=qd&key="+sss.key+"&user="+sss.user+"&pass="+sss.pass+"&token="+token,url)
+
+syso(url)
+
+hs(url,api)
+
+
+syso(api)
+json(api,api)
+json(api,"get","code",code)
+json(api,"get","message",msg)
+
+f(code==1)
+{
+  ufnsui()
+  {
+    //操作成功
+    tw(msg)
+  }
+}else
+{
+  ufnsui()
+  {
+    //签到失败，可能是已签到或者管理员已关闭签到
+    tw(msg)
+  }
+}
+
+
+}</eventItme></event>
+</View>
+<View id="115" did="91" type="LinearLayout">
+<ppt>width=-1
+height=48dp
+background=#ffffff
+backgroundripple=#21000000
+gravity=center
+clickable=true
+background=selectableitem</ppt>
+<event><eventItme type="clicki">fd("%Android/data/com.jiuxia.boat.launcher.pro/data/file/data/information.json", duserinfo)
+uigo("login.iyu")
+end()
+endcode</eventItme></event>
+</View>
+<View id="116" did="115" type="TextView">
+<ppt>width=-2
+height=-2
+text=退出登录
+textColor=#F44336</ppt>
+<event></event>
+</View>
+<View id="122" did="17" type="CardView">
+<ppt>width=-1
+height=-2
+layout_marginLeft=10dp
+layout_marginRight=10dp
+app_CardcornerRadius=5dp
+layout_marginBottom=20dp
+layout_marginTop=5dp</ppt>
+<event></event>
+</View>
+<View id="123" did="122" type="LinearLayout">
+<ppt>width=-2
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="124" did="123" type="LinearLayout">
+<ppt>width=-1
+height=55dp
+orientation=vertical
+background=selectableitem
+clickable=true</ppt>
+<event></event>
+</View>
+<View id="125" did="124" type="RelativeLayout">
+<ppt>width=-1
+height=-1</ppt>
+<event><eventItme type="clicki">/.
+开发者:JiuXia2025，QQ2025226181
+开源地址:https://github.com/JiuXia2025/Boat_Launcher
+开源协议:MIT
+个人主页:http://www.9xia.top
+注意:参考性大于实用性,因某些原因项目核心部分代码已删除,尊重劳动成果使用时请注明来自@JiuXia2025
+删除的内容:启动游戏部分(内置启动与外置启动),九夏云中心,游戏账号管理,正版登录与外置登录
+./
+utw(null,"","agreements.iyu","",false,v)
+{
+}
+</eventItme></event>
+</View>
+<View id="126" did="125" type="LinearLayout">
+<ppt>width=-2
+height=55dp
+orientation=vertical
+gravity=center_vertical</ppt>
+<event></event>
+</View>
+<View id="127" did="126" type="TextView">
+<ppt>width=-2
+height=-2
+text=《用户服务协议》与《隐私政策》
+textColor=#000000
+layout_marginLeft=10dp</ppt>
+<event></event>
+</View>
+<View id="128" did="125" type="ImageView">
+<ppt>width=55dp
+height=55dp
+src=@icon_gray/ic_navigate_next_grey600_24dp.png
+ut_centerVertical=true
+ut_alignParentRight=true
+.layout_marginRight=15dp
+.layout_margintop=-39dp
+.layout_marginleft=6dp
+.scaleType=center
+padding=17dp</ppt>
+<event></event>
+</View>
+<View id="44" did="1" type="CardView">
+<ppt>width=-1
+height=-2
+app_CardcornerRadius=5dp
+layout_marginLeft=10dp
+layout_marginRight=10dp
+layout_marginBottom=25dp
+layout_marginTop=10dp
+ut_alignParentBottom=true</ppt>
+<event></event>
+</View>
+<View id="8" did="44" type="LinearLayout">
+<ppt>width=-1
+height=40dp
+gravity=center_vertical
+background=white</ppt>
+<event></event>
+</View>
+<View id="13" did="8" type="RelativeLayout">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="14" did="13" type="RelativeLayout">
+<ppt>width=200dp
+height=-1
+ut_centerVertical=true
+background=selectableitem</ppt>
+<event><eventItme type="clicki">us(d.1,"visibility","visible")
+dha(dh, false, true)
+dh(dh, "duration", 500)
+us(d.1, "dh", dh)
+us(a.1,"visibility","gone")
+us(b.1,"visibility","gone")
+us(c.1,"visibility","gone")
+us(set.1,"visibility","gone")
+us(mod.1,"visibility","gone")
+us(home.1,"visibility","gone")
+us(17, "text", "关于")</eventItme></event>
+</View>
+<View id="15" did="14" type="ImageView">
+<ppt>width=25dp
+height=25dp
+src=@icon_gray/ic_settings_grey600_48dp.png
+ut_centerVertical=true
+layout_marginLeft=10dp</ppt>
+<event></event>
+</View>
+<View id="16" did="14" type="TextView">
+<ppt>width=-2
+height=-2
+text=关于程序
+ut_toRightOf=15
+layout_marginLeft=3dp
+ut_centerVertical=true
+.textColor=#ffffff</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">//fn md.shadow("c.22")
+
+//fn md.Elevation(77,2)</eventItme></UIEventset>

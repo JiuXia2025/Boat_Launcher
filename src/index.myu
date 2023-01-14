@@ -1,0 +1,30 @@
+/.
+开发者:JiuXia2025，QQ2025226181
+开源地址:https://github.com/JiuXia2025/Boat_Launcher
+开源协议:MIT
+个人主页:http://www.9xia.top
+注意:参考性大于实用性,因某些原因项目核心部分代码已删除,尊重劳动成果使用时请注明来自@JiuXia2025
+删除的内容:启动游戏部分(内置启动与外置启动),九夏云中心,游戏账号管理,正版登录与外置登录
+./
+fn loadiyu()
+fn index.loadiyu2()
+end fn
+
+fn loadiyu2()
+
+//    九夏云中心模块
+
+// 连接九夏云中心服务端
+sss server="http://mcbl.s1.9xia.top/"
+// server=云中心连接地址
+sss key="dfdcdb9291234bc9"
+// key=程序标识
+sss token="423385c8a803694aaef05b68b4d414c1"
+// token=请求接口鉴权凭证
+sss ekey="mcbl96331"
+//  ekey=Des数据加密密钥
+
+uigo("index.iyu")
+end()
+endcode
+end fn

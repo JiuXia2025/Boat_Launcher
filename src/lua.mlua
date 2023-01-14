@@ -1,0 +1,168 @@
+function files(uri)
+--解析文件uri
+import "android.provider.MediaStore$Images$Media"
+local proj = i:sl(Media.DATA,":")
+local cursor = activity:managedQuery(uri,proj,nil,nil,nil)
+local column_index = cursor:getColumnIndexOrThrow(Media.DATA)
+cursor:moveToFirst()
+return cursor:getString(column_index)
+end
+
+function Getapp(fp)
+--解析apk
+import "android.content.pm.PackageManager"
+pm = activity:getPackageManager()
+info = pm:getPackageArchiveInfo(fp, PackageManager.GET_ACTIVITIES);
+if info ~= nil then
+appInfo = info.applicationInfo;
+appInfo.publicSourceDir = fp; 
+appName = tostring(pm:getApplicationLabel(appInfo))
+pn = appInfo.packageName;
+v=info.versionName;
+vs=info.versionCode;
+vs=string.sub(vs,1,-3)
+icon = pm:getApplicationIcon(appInfo);
+local c = {icon,appName,pn,v,vs}
+local sz = tosz(c)
+return sz
+end
+end
+
+function Getmime(name)
+--解析文件类型
+import "android.webkit.MimeTypeMap"
+ExtensionName=tostring(name):match("%.(.+)") Mime=MimeTypeMap:getSingleton():getMimeTypeFromExtension(ExtensionName)
+return tostring(Mime)
+end
+
+function ifapp(pack)
+--判断apk是否安装
+if pcall(function() activity:getPackageManager():getPackageInfo(pack,0) end) then
+return "true"
+else
+return "false"
+end
+end
+
+function InputText(ids,hi)
+local eid=ids+1
+local id=i:gvs(ids)
+--初始化控件
+local dp = i:zdp(24)
+local dps = i:zdp(6)
+local eids=i:gvs(eid)
+eids:setPadding(0,dp,0,dps)
+local o = i:us(eid, "background", "")
+local o = i:us(eid, "textcursordrawable", "#ff83b2ff")
+--创建提示
+local hint = i:nvw(0, id, "文本", "ntext=内容")
+local o = i:us(hint, "text", hi)
+local o = i:us(hint, "textsize", "14sp")
+local o = i:us(hint, "textcolor", "#797979")
+local o = i:us(hint, "layout_margintop", "24dp")
+--创建线条
+local edx = i:nvw(0, id, "文本", "width=-1\nheight=1dp\ntext=\nbackground=#7f000000\nlayout_marginbottom=1dp")
+local o = i:us(edx, "ut_alignbottom", eid)
+--获得焦点事件
+i:ssj(eid, "focuschange",{
+function(st_vId,st_vW,st_hF)
+local text = i:ug(eid, "text")
+if st_hF==true then
+local o = i:us(edx, "height", "2dp")
+local o = i:us(edx, "background", "#ff83b2ff")
+local o = i:us(edx, "layout_marginbottom", "0dp")
+local o = i:us(hint, "textcolor", "#ff83b2ff")
+--移动hint
+if text=="" then
+local o = i:us(hint, "textsize", "12sp")
+local o = i:us(hint, "layout_margintop", "0dp")
+local dp = i:zdp(24)
+local dh = i:dht(00, 00, dp, 0)
+i:dh(dh, "duration", 40)
+i:us(hint, "dh", dh)
+end
+else
+local o = i:us(edx, "height", "1dp")
+local o = i:us(edx, "background", "#7f000000")
+local o = i:us(edx, "layout_marginbottom", "1dp")
+local o = i:us(hint, "textcolor", "#7f000000")
+if text=="" then
+local o = i:us(hint, "layout_margintop", "24dp")
+local o = i:us(hint, "textsize", "14sp")
+local dp = i:zdp(24)
+local dh = i:dht(00, 00, -dp, 0)
+i:dh(dh, "duration", 40)
+i:us(hint, "dh", dh)
+end
+end
+end
+})
+end
+
+function sbar()
+--计算状态栏
+local h = i:swh("pxh")
+local hh = i:swh("pxhh")
+local hd = hh-h
+return hd
+end
+
+function Swipe(ids)
+if type(ids)=="number" then
+ids=i:gvs(ids)
+end
+import "android.graphics.*"
+import "android.support.v4.widget.*"
+local id=SwipeRefreshLayout(activity)
+color = Color:parseColor(tos("#ff83b2ff"))
+syso(color)
+List = i:nsz(1,"int")
+i:sssz(List,0,toi(color))
+id:setColorSchemeColors(List)
+i:nvw(id,ids)
+local set=i:us(id,"layout_margintop","56dp")
+sss("SwipeOn","android.support.v4.widget.SwipeRefreshLayout.setOnRefreshListener")
+sss("SwipeClass",".android.support.v4.widget.SwipeRefreshLayout$OnRefreshListener")
+sss("SwipeOff","android.support.v4.widget.SwipeRefreshLayout.setRefreshing")
+return id
+end
+
+function imgColor(id,color)
+--图标着色 
+if type(id)=="number" then
+id=i:gvs(id)
+end
+import "android.graphics.Color"
+local color = Color:parseColor(tos(color))
+id:setColorFilter(color)
+end
+
+function padding(id,p1,p2,p3,p4)
+--设置内边距
+local id=i:gvs(id)
+local p1 = i:zdp(p1)
+local p2 = i:zdp(p2)
+local p3 = i:zdp(p3)
+local p4 = i:zdp(p4)
+id:setPadding(p1,p2,p3,p4)
+end
+
+function Toasts(cv)
+--自定义tw
+import "android.widget.*"
+import "android.view.Gravity"
+to=Toast(activity)
+to:setGravity(Gravity.BOTTOM,0,0);
+to:setView(cv)
+to:show()
+end
+
+function getPackage()
+--获取自身包名
+return activity:getPackageName()
+end
+
+function onClicks(obj)
+--模拟点击事件
+obj:performClick()
+end

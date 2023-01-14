@@ -1,0 +1,361 @@
+<View id="1" did="0" type="RelativeLayout">
+<ppt>width=-1
+height=-1
+.padding=65dp
+layout_weight=1</ppt>
+<event></event>
+</View>
+<View id="36" did="1" type="ScrollView">
+<ppt>width=-1
+height=-1
+.layout_marginTop=40dp
+layout_marginBottom=70dp
+layout_marginTop=25dp</ppt>
+<event></event>
+</View>
+<View id="17" did="36" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+.BackgroundColor=#a8ffffff</ppt>
+<event></event>
+</View>
+<View id="21" did="17" type="CardView">
+<ppt>width=-1
+height=-2
+layout_marginLeft=10dp
+layout_marginRight=10dp
+.layout_marginTop=25dp
+layout_marginBottom=15dp
+app_CardcornerRadius=5dp</ppt>
+<event></event>
+</View>
+<View id="48" did="21" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="47" did="48" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="22" did="47" type="RelativeLayout">
+<ppt>width=-1
+height=-2
+background=selectableitem</ppt>
+<event></event>
+</View>
+<View id="25" did="22" type="LinearLayout">
+<ppt>width=-1
+height=55dp
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="29" did="25" type="RelativeLayout">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="30" did="29" type="LinearLayout">
+<ppt>width=-2
+height=55dp
+orientation=vertical
+gravity=center_vertical</ppt>
+<event></event>
+</View>
+<View id="31" did="30" type="TextView">
+<ppt>width=-2
+height=-2
+text=最大内存（MB）
+textColor=#000000
+layout_marginLeft=10dp</ppt>
+<event></event>
+</View>
+<View id="32" did="30" type="TextView">
+<ppt>width=-2
+height=-2
+text=TextView
+layout_marginLeft=10dp</ppt>
+<event></event>
+</View>
+<View id="34" did="29" type="TextView">
+<ppt>width=-1
+height=2dp
+text=
+background=#ff83b2ff
+layout_margintop=4dp
+ut_alignParentBottom=true
+ut_toRightOf=30
+layout_marginRight=8dp
+layout_marginLeft=14dp
+layout_marginBottom=8dp
+layout_marginTop=8dp</ppt>
+<event></event>
+</View>
+<View id="33" did="29" type="EditText">
+<ppt>width=-1
+height=56dp
+text=
+paddingtop=24dp
+background=
+textsize=14sp
+singleline=true
+focusable=true
+focusableintouchmode=true
+ut_toRightOf=30
+layout_marginLeft=13dp
+layout_marginRight=8dp
+layout_marginBottom=15dp
+cursorVisible=false
+digits=0123456789
+layout_marginRight=90dp</ppt>
+<event></event>
+</View>
+<View id="45" did="29" type="Button">
+<ppt>width=85dp
+height=-2
+text=保存
+ut_alignParentRight=true
+layout_marginRight=5dp</ppt>
+<event><eventItme type="clicki">/.
+开发者:JiuXia2025，QQ2025226181
+开源地址:https://github.com/JiuXia2025/Boat_Launcher
+开源协议:MIT
+个人主页:http://www.9xia.top
+注意:参考性大于实用性,因某些原因项目核心部分代码已删除,尊重劳动成果使用时请注明来自@JiuXia2025
+删除的内容:启动游戏部分(内置启动与外置启动),九夏云中心,游戏账号管理,正版登录与外置登录
+./
+ug(c.33, "text", t3)
+f(t3 == "null" || t3 == "")
+{
+	fn md.tw("保存失败，请输入完整")
+}
+else
+{
+	fw("%Android/data/com.jiuxia.boat.launcher.pro/data/file/data/ram.txt",t3)
+    fn md.tw("保存成功")
+}
+
+
+
+</eventItme></event>
+</View>
+<View id="37" did="22" type="LinearLayout">
+<ppt>width=-1
+height=55dp
+orientation=vertical
+layout_marginTop=55dp</ppt>
+<event></event>
+</View>
+<View id="38" did="37" type="RelativeLayout">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="39" did="38" type="LinearLayout">
+<ppt>width=-2
+height=55dp
+orientation=vertical
+gravity=center_vertical</ppt>
+<event></event>
+</View>
+<View id="40" did="39" type="TextView">
+<ppt>width=-2
+height=-2
+text=启动参数
+textColor=#000000
+layout_marginLeft=10dp</ppt>
+<event></event>
+</View>
+<View id="41" did="39" type="TextView">
+<ppt>width=-2
+height=-2
+text=Jvm启动附加参数
+layout_marginLeft=10dp</ppt>
+<event></event>
+</View>
+<View id="42" did="38" type="TextView">
+<ppt>width=-1
+height=2dp
+text=
+background=#ff83b2ff
+layout_margintop=4dp
+ut_alignParentBottom=true
+ut_toRightOf=39
+layout_marginRight=8dp
+layout_marginLeft=8dp
+layout_marginBottom=8dp
+layout_marginTop=8dp</ppt>
+<event></event>
+</View>
+<View id="43" did="38" type="EditText">
+<ppt>width=-1
+height=56dp
+text=
+hint=开发中，暂不支持修改
+paddingtop=24dp
+background=
+textsize=14sp
+singleline=true
+focusable=true
+focusableintouchmode=true
+ut_toRightOf=39
+layout_marginLeft=8dp
+layout_marginRight=8dp
+layout_marginBottom=15dp
+cursorVisible=false
+digits=qwertyuiopasdfghjklzxcvbnm_01234567890-QWERTYUIOPASDFGHJKLZXCVBNM@.
+layout_marginRight=90dp</ppt>
+<event></event>
+</View>
+<View id="46" did="38" type="Button">
+<ppt>width=85dp
+height=-2
+text=保存
+ut_alignParentRight=true
+layout_marginRight=5dp</ppt>
+<event><eventItme type="clicki">fn md.tw("开发中，暂不支持修改")
+/.
+开发者:JiuXia2025，QQ2025226181
+开源地址:https://github.com/JiuXia2025/Boat_Launcher
+开源协议:MIT
+个人主页:http://www.9xia.top
+注意:参考性大于实用性,因某些原因项目核心部分代码已删除,尊重劳动成果使用时请注明来自@JiuXia2025
+删除的内容:启动游戏部分(内置启动与外置启动),九夏云中心,游戏账号管理,正版登录与外置登录
+./</eventItme></event>
+</View>
+<View id="49" did="48" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=horizontal</ppt>
+<event></event>
+</View>
+<View id="50" did="49" type="ImageView">
+<ppt>width=36dp
+height=36dp
+src=@icon_gray/ic_info_outline_grey600_24dp.png
+layout_marginleft=10dp
+layout_margintop=5dp
+padding=6dp</ppt>
+<event></event>
+</View>
+<View id="51" did="49" type="TextView">
+<ppt>width=-2
+height=-2
+text=注意事项\n\n在启动游戏前，请先设置最大内存\n最大内存为启动Jvm时设置的最大内存。物理内存则为您设备的内存大小。最大内存不可设置太大或太小，最大内存设置错误可能会导致启动失败黑屏闪退运行卡顿等\n建议设置最大内存512以上1024以下，不同设备设置的最大内存可能会有差异
+layout_gravity=center_vertical
+layout_marginTop=14dp
+textSize=13sp
+layout_marginBottom=15dp
+layout_marginRight=10dp</ppt>
+<event></event>
+</View>
+<View id="44" did="1" type="CardView">
+<ppt>width=-1
+height=-2
+app_CardcornerRadius=5dp
+layout_marginLeft=10dp
+layout_marginRight=10dp
+layout_marginBottom=25dp
+layout_marginTop=10dp
+ut_alignParentBottom=true</ppt>
+<event></event>
+</View>
+<View id="8" did="44" type="LinearLayout">
+<ppt>width=-1
+height=40dp
+gravity=center_vertical
+background=white</ppt>
+<event></event>
+</View>
+<View id="13" did="8" type="RelativeLayout">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="14" did="13" type="RelativeLayout">
+<ppt>width=130dp
+height=-1
+ut_centerVertical=true
+background=selectableitem</ppt>
+<event><eventItme type="clicki">/.
+开发者:JiuXia2025，QQ2025226181
+开源地址:https://github.com/JiuXia2025/Boat_Launcher
+开源协议:MIT
+个人主页:http://www.9xia.top
+注意:参考性大于实用性,因某些原因项目核心部分代码已删除,尊重劳动成果使用时请注明来自@JiuXia2025
+删除的内容:启动游戏部分(内置启动与外置启动),九夏云中心,游戏账号管理,正版登录与外置登录
+./
+//mod列表加载
+
+s dir = "%boat/gamedir/mods/"
+
+fl(dir,true,a)
+
+for(b;a)
+{
+ula(c,9="@file/file.png",5=b)
+}
+
+uls(mod.5,c,"f2.iyu","220dp",-2)
+
+fl(dir,false,a)
+
+for(b;a)
+{
+
+}
+
+uls(mod.5,c,"f2.iyu","220dp",-2)
+
+
+fl(dir,false,a)
+
+for(b;a)
+{
+
+f(b*?".jar")
+{
+ula(c,9="@grass.png",5=b)
+}
+}
+
+uls(mod.5,c,"f2.iyu","220dp",-2)
+
+
+us(home.1,"visibility","gone")
+us(c.1,"visibility","gone")
+us(a.1,"visibility","gone")
+us(set.1,"visibility","gone")
+us(b.1,"visibility","gone")
+us(mod.1,"visibility","visible")
+dha(dh, false, true)
+dh(dh, "duration", 500)
+us(mod.1, "dh", dh)
+</eventItme></event>
+</View>
+<View id="15" did="14" type="ImageView">
+<ppt>width=25dp
+height=25dp
+src=@icon_gray/ic_settings_grey600_48dp.png
+ut_centerVertical=true
+layout_marginLeft=10dp</ppt>
+<event></event>
+</View>
+<View id="16" did="14" type="TextView">
+<ppt>width=-2
+height=-2
+text=模组管理
+ut_toRightOf=15
+layout_marginLeft=3dp
+ut_centerVertical=true
+.textColor=#ffffff</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">
+fn md.shadow("c.22")
+
+</eventItme></UIEventset>

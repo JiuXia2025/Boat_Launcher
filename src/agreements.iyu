@@ -1,0 +1,93 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+background=white</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="LinearLayout">
+<ppt>width=-1
+height=50dp
+gravity=center_vertical
+layout_margintop=2dp</ppt>
+<event></event>
+</View>
+<View id="3" did="2" type="TextView">
+<ppt>width=-2
+height=-2
+text=用户服务协议与隐私政策
+textStyle=bold
+layout_marginleft=15dp
+textsize=18sp
+textColor=#616161</ppt>
+<event></event>
+</View>
+<View id="4" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-2</ppt>
+<event></event>
+</View>
+<View id="19" did="4" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="23" did="19" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=horizontal
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="29" did="23" type="RelativeLayout">
+<ppt>width=-2
+height=-2</ppt>
+<event></event>
+</View>
+<View id="24" did="29" type="TextView">
+<ppt>width=-2
+height=-2
+text=(html)&lt;a href="#"&gt;《用户服务协议》&lt;/a&gt;
+textColorLink=#ff83b2ff
+textColor=#000000
+</ppt>
+<event><eventItme type="clicki">sss web="http://mcbl.9xia.top/agreement/1.html"
+uigo("web.iyu")</eventItme></event>
+</View>
+<View id="25" did="29" type="TextView">
+<ppt>width=-2
+height=-2
+text=和
+ut_toRightOf=24</ppt>
+<event></event>
+</View>
+<View id="26" did="29" type="TextView">
+<ppt>width=-2
+height=-2
+text=(html)&lt;a href="#"&gt;《隐私政策》&lt;/a&gt;
+ut_toRightOf=25
+textColorLink=#ff83b2ff
+textColor=#000000
+</ppt>
+<event><eventItme type="clicki">sss web="http://mcbl.9xia.top/agreement/2.html"
+uigo("web.iyu")</eventItme></event>
+</View>
+<View id="9" did="1" type="RelativeLayout">
+<ppt>width=-1
+height=-2
+layout_margintop=10dp</ppt>
+<event></event>
+</View>
+<View id="8" did="9" type="Button">
+<ppt>width=70dp
+height=-2
+text=确定
+textsize=13dp
+textcolor=#ff83b2ff
+ut_alignparentright=true
+BackgroundColor=#00ff00ff
+layout_marginRight=15dp</ppt>
+<event><eventItme type="clicki">endutw()</eventItme></event>
+</View>
+<UIEventset></UIEventset>

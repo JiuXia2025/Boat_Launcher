@@ -1,0 +1,21 @@
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.util.Base64;
+/**
+ * 
+ * @author 酷安@辉少菌
+ * SKYRE
+ * Base64转Bitmap
+ *
+ */
+
+public static Bitmap 转图片(String string) {
+        Bitmap bitmap = null;
+		try {
+            byte[] bitmapByte = Base64.decode(string, Base64.DEFAULT);
+            bitmap = BitmapFactory.decodeByteArray(bitmapByte, 0, bitmapByte.length);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return bitmap;
+    }

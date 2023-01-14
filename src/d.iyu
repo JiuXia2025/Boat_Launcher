@@ -1,0 +1,185 @@
+<View id="4" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=center
+visibility=gone</ppt>
+<event></event>
+</View>
+<View id="6" did="4" type="ProgressBar">
+<ppt>width=-2
+height=-2
+style=16842871</ppt>
+<event></event>
+</View>
+<View id="7" did="4" type="TextView">
+<ppt>width=-2
+height=-2
+text=正在加载，请稍后</ppt>
+<event></event>
+</View>
+<View id="1" did="0" type="RelativeLayout">
+<ppt>width=-1
+height=-1
+.padding=65dp
+layout_weight=1</ppt>
+<event></event>
+</View>
+<View id="36" did="1" type="ScrollView">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="17" did="36" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+.BackgroundColor=#a8ffffff</ppt>
+<event></event>
+</View>
+<View id="21" did="17" type="CardView">
+<ppt>width=-1
+height=-2
+layout_marginLeft=10dp
+layout_marginRight=10dp
+layout_marginTop=25dp
+layout_marginBottom=20dp
+app_CardcornerRadius=5dp</ppt>
+<event></event>
+</View>
+<View id="52" did="21" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="54" did="52" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="22" did="54" type="RelativeLayout">
+<ppt>width=-1
+height=-2
+background=selectableitem
+clickable=true</ppt>
+<event></event>
+</View>
+<View id="48" did="22" type="ImageView">
+<ppt>width=-2
+height=-2
+src=@craft_table.png
+ut_centerVertical=true
+layout_marginLeft=20dp
+layout_marginTop=20dp
+layout_marginBottom=20dp</ppt>
+<event></event>
+</View>
+<View id="56" did="22" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+ut_toRightOf=48
+ut_centerVertical=true
+layout_marginLeft=20dp
+layout_marginRight=20dp
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="57" did="56" type="TextView">
+<ppt>width=-2
+height=-2
+text=Boat Launcher Pro
+textSize=20sp
+textColor=#000000</ppt>
+<event></event>
+</View>
+<View id="62" did="52" type="LinearLayout">
+<ppt>width=-1
+height=80dp
+orientation=vertical
+gravity=center_vertical
+layout_marginLeft=20dp</ppt>
+<event></event>
+</View>
+<View id="63" did="62" type="TextView">
+<ppt>width=-2
+height=-2
+text=由九夏与SKYRE编写（酷安@JiuXia2025  &   酷安@辉少菌）</ppt>
+<event></event>
+</View>
+<View id="64" did="62" type="TextView">
+<ppt>width=-2
+height=-2
+text=开源地址：https://github.com/JiuXia2025/Boat_Launcher</ppt>
+<event></event>
+</View>
+<View id="65" did="62" type="TextView">
+<ppt>width=-2
+height=-2
+text=个人主页：http://www.9xia.top</ppt>
+<event></event>
+</View>
+<View id="47" did="1" type="CardView">
+<ppt>width=-1
+height=-2
+app_CardcornerRadius=5dp
+layout_marginLeft=10dp
+layout_marginRight=10dp
+layout_marginBottom=25dp
+layout_marginTop=10dp
+ut_alignParentBottom=true</ppt>
+<event></event>
+</View>
+<View id="8" did="47" type="LinearLayout">
+<ppt>width=-1
+height=40dp
+gravity=center_vertical
+background=#009688</ppt>
+<event></event>
+</View>
+<View id="13" did="8" type="RelativeLayout">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="14" did="13" type="RelativeLayout">
+<ppt>width=130dp
+height=-1
+ut_centerVertical=true
+background=selectableitem</ppt>
+<event><eventItme type="clicki">us(home.1,"visibility","gone")
+us(a.1,"visibility","gone")
+us(set.1,"visibility","gone")
+us(b.1,"visibility","visible")
+us(c.1,"visibility","gone")
+us(d.1,"visibility","gone")
+us(mod.1,"visibility","gone")
+dha(dh, false, true)
+dh(dh, "duration", 500)
+us(b.1, "dh", dh)
+</eventItme></event>
+</View>
+<View id="15" did="14" type="ImageView">
+<ppt>width=25dp
+height=25dp
+src=@ic_arrow_back_white_48dp.png
+ut_centerVertical=true
+layout_marginLeft=10dp</ppt>
+<event></event>
+</View>
+<View id="16" did="14" type="TextView">
+<ppt>width=-2
+height=-2
+text=返回
+ut_toRightOf=15
+layout_marginLeft=3dp
+ut_centerVertical=true
+textColor=#ffffff</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">
+fn md.shadow("c.22")
+
+</eventItme></UIEventset>

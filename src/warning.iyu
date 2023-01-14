@@ -1,0 +1,158 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+background=white</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="LinearLayout">
+<ppt>width=-1
+height=50dp
+gravity=center_vertical
+layout_margintop=2dp</ppt>
+<event></event>
+</View>
+<View id="3" did="2" type="TextView">
+<ppt>width=-2
+height=-2
+text=警告
+textStyle=bold
+layout_marginleft=15dp
+textsize=18sp
+textColor=#616161</ppt>
+<event></event>
+</View>
+<View id="4" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-2</ppt>
+<event></event>
+</View>
+<View id="19" did="4" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="13" did="19" type="RelativeLayout">
+<ppt>width=-1
+height=-2</ppt>
+<event></event>
+</View>
+<View id="14" did="13" type="TextView">
+<ppt>width=-2
+height=-2
+text=用户名
+ut_centerVertical=true
+layout_marginLeft=15dp
+layout_marginRight=15dp</ppt>
+<event></event>
+</View>
+<View id="15" did="13" type="EditText">
+<ppt>width=-1
+height=-2
+text=
+ut_toRightOf=14
+layout_marginRight=15dp</ppt>
+<event></event>
+</View>
+<View id="22" did="19" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="23" did="22" type="CheckBox">
+<ppt>width=-2
+height=-2
+text=正版登录（暂不支持）</ppt>
+<event></event>
+</View>
+<View id="9" did="1" type="RelativeLayout">
+<ppt>width=-1
+height=-2
+layout_margintop=10dp</ppt>
+<event></event>
+</View>
+<View id="7" did="9" type="Button">
+<ppt>width=70dp
+height=-2
+text=取消
+BackgroundColor=#00ff00ff
+textsize=13dp
+textcolor=#ff83b2ff
+ut_toleftof=8</ppt>
+<event><eventItme type="clicki">endutw()</eventItme></event>
+</View>
+<View id="8" did="9" type="Button">
+<ppt>width=70dp
+height=-2
+text=确定
+textsize=13dp
+textcolor=#ff83b2ff
+ut_alignparentright=true
+BackgroundColor=#00ff00ff</ppt>
+<event><eventItme type="clicki">/.
+开发者:JiuXia2025，QQ2025226181
+开源地址:https://github.com/JiuXia2025/Boat_Launcher
+开源协议:MIT
+个人主页:http://www.9xia.top
+注意:参考性大于实用性,因某些原因项目核心部分代码已删除,尊重劳动成果使用时请注明来自@JiuXia2025
+删除的内容:启动游戏部分(内置启动与外置启动),九夏云中心,游戏账号管理,正版登录与外置登录
+./
+gvs(sss.addaccount,15,文字)
+ug(文字,"text",user)
+fr("%Android/data/com.jiuxia.boat.launcher.pro/file/user.txt", ruser)
+ss("【" + user + "】", dnr)
+ss(ruser + dnr + "", fdok)
+strim(fdok, ok)
+fw("%Android/data/com.jiuxia.boat.launcher.pro/file/user.txt", ok)
+fn md.tw("保存成功")
+endutw()
+//fw("%Android/data/com.jiuxia.boat.launcher.pro/file/user.txt", user)
+t()
+{
+fr("%Android/data/com.jiuxia.boat.launcher.pro/file/user.txt",a)
+
+f(a == "null")
+{
+  //fn md.tw("配置文件为空，请先添加账号")
+	endcode
+}
+else
+{
+sj(a,"【",null,b)
+sl(b,"【",c)
+for(d;c)
+{
+sj(d,null,"】",bt)
+sj(d,"】",null,nr)
+strim(nr,nr)
+ula(sss.x,1=null,3="@live_treasurebox_bg1.png",3=null,9=bt,5=nr,6=null)
+}
+ufnsui()
+{
+uls(sss.listview,sss.x,"app_list.iyu",-1,-2)
+us(b.4,"visibility","gone")
+}
+
+}
+}
+./
+fe("%Android/data/com.jiuxia.boat.launcher.pro/file/gameid.txt", rgameids)
+f(rgameids == "true")
+{
+fr("%Android/data/com.jiuxia.boat.launcher.pro/file/gameid.txt", rgameid)
+sr(rgameid, "【", "", rgameid)
+sr(rgameid, "】", "", rgameid)
+strim(rgameid, rgameid)
+ss("您选择的ID：" + rgameid, gameid)
+us(b.18, "text", gameid)
+}
+else
+{
+us(b.18, "text", "未选择游戏ID")
+}
+</eventItme></event>
+</View>
+<UIEventset></UIEventset>

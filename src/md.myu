@@ -1,0 +1,255 @@
+/.
+开发者:JiuXia2025，QQ2025226181
+开源地址:https://github.com/JiuXia2025/Boat_Launcher
+开源协议:MIT
+个人主页:http://www.9xia.top
+注意:参考性大于实用性,因某些原因项目核心部分代码已删除,尊重劳动成果使用时请注明来自@JiuXia2025
+删除的内容:启动游戏部分(内置启动与外置启动),九夏云中心,游戏账号管理,正版登录与外置登录
+./
+//头部
+fn top(id)
+uycl("#ff83b2ff",true)
+gvs(id,c)
+zdp(4,dp)
+java(null,c,"android.view.View.setElevation","float",dp)
+us(1,"background","#eeeeee")
+end fn
+//MD2头部
+fn top2(id)
+gvs(id,c)
+zdp(4,dp)
+java(null,c,"android.view.View.setElevation","float",dp)
+us(1,"background","#eeeeee")
+end fn
+//按钮
+fn box(id,color,alp)
+zdp(2,dp)
+ngde(dp,color,b)
+us(id,"background",b)
+gvs(id,c)
+java(null,c,"android.view.View.setElevation","float",dp)
+us(c,"backgroundripple",alp)
+end fn
+
+//卡片列表
+fn shadow(obj)
+zdp(2,dp)
+ngde(dp,"#ffffff",y)
+us(obj,"background",y)
+us(obj,"backgroundripple","#21000000")
+java(null,obj,"android.view.View.setElevation","float",dp)
+end fn
+
+fn shadow2(ob)
+zdp(2,dp)
+//ngde(dp,"#ffffff",y)
+//us(ob,"background",y)
+//us(ob,"backgroundripple","#21000000")
+java(null,ob,"android.view.View.setElevation","float",dp)
+end fn
+
+//设置阴影
+fn Elevation(id,dp)
+zdp(dp,dp)
+gvs(id,c)
+java(null,c,"android.view.View.setElevation","float",dp)
+end fn
+
+
+//退出
+fn end(z)
+f(z==4){
+ug(ss.pup,"visibility",w)
+f(w==0){
+fn md.pup()
+endcode
+}
+ug(ss.pop,"visibility",k)
+f(k==0){
+fn md.pop()
+endcode
+}
+end()
+}
+end fn
+
+//下拉刷新组件开关
+fn Swipe(z,bool)
+java(null,z,"android.support.v4.widget.SwipeRefreshLayout.setRefreshing","boolean",bool)
+end fn
+
+//加载中
+fn loading(show)
+endkeyboard()
+utw("","","null.iyu",false,v){
+}
+nvw(d,v, "线性布局", "ut_below=2\nwidth=-1\nheight=80dp\ngravity=center_vertical",d)
+nvw(t,d, "进度条", "width=48dp\nheight=48dp\nstyle=16842874\nlayout_marginleft=24dp")
+nvw(b,d, "文本", "layout_marginleft=24dp\nlayout_marginright=24dp\ntextcolor=#7f000000\ntextsize=14sp\nsingleline=true\nellipsize=end",b)
+us(b,"text",show)
+end fn
+
+//popMenu
+fn pop(show)
+nvw(o,1,"线性布局","width=-1\nheight=-1\ngravity=right\nbackground=#00000000",ss.pop)
+zdp(24,dp)
+java(null,ss.pop,"android.view.View.setElevation","float",dp)
+ssj(ss.pop,"clicki"){
+s ok=null}
+ssj(ss.pop,"touchmonitor"){
+urvw(ss.pop)
+ss pop=null}
+nvw(o,ss.pop,"线性布局","width=196dp\norientation=vertical\nlayout_marginright=4dp\nlayout_margintop=4dp",dc)
+zdp(2,dp)
+ngde(dp,"#fafafa",b)
+us(dc,"background",b)
+zdp(16,dp)
+java(null,dc,"android.view.View.setElevation","float",dp)
+sl(show,".",z)
+s i=0
+for(wc;z){
+s+(1,i)
+nvw(o,dc,"线性布局","width=-1\nheight=48dp\nbackground=through",d)
+nvw(o,d,"文本","width=-1\nheight=-1\ntextcolor=#cc000000\ntextsize=14sp\ngravity=center_vertical\npaddingleft=16dp\nbackgroundripple=#21000000",id)
+us(id,"text",wc)
+f(i==1){
+ss pop1=id
+}
+f(i==2){
+ss pop2=id
+}
+f(i==3){
+ss pop3=id
+}
+f(i==4){
+ss pop4=id
+}
+f(i==5){
+ss pop5=id
+}
+f(i==6){
+ss pop6=id
+}
+}
+end fn
+fn pop()
+urvw(ss.pop)
+ss pop=null
+end fn
+
+//pupMenu
+fn pup(show)
+nvw(o,1,"相对布局","width=-1\nheight=-1",ss.pup)
+zdp(24,dp)
+java(null,ss.pup,"android.view.View.setElevation","float",dp)
+ssj(ss.pup,"clicki"){
+s ok=null}
+ssj(ss.pup,"touchmonitor"){
+urvw(ss.pup)
+ss pup=null
+}
+nvw(o,ss.pup,"线性布局","orientation=vertical\nwidth=196dp\nheight=48dp\nut_alignparentright=true\nut_alignparentbottom=true",dc)
+zdp(2,dp)
+ngde(dp,"#fafafa",y)
+us(dc,"background",y)
+zdp(16,dp)
+java(null,dc,"android.view.View.setElevation","float",dp)
+sl(show,".",z)
+s i=0
+for(wc;z){
+s+(1,i)
+nvw(o,dc,"线性布局","width=-1\nheight=48dp\nbackground=through",d)
+nvw(o,d,"文本","width=-1\nheight=-1\ntextcolor=#cc000000\ntextsize=14sp\ngravity=center_vertical\npaddingleft=16dp\nbackgroundripple=#21000000",id)
+us(id,"text",wc)
+zdp(48,dp)
+f(i==1){
+ss pup1=id
+}
+f(i==2){
+ss pup2=id
+s(dp*2,h)
+us(dc,"height",h)
+}
+f(i==3){
+ss pup3=id
+s(dp*3,h)
+us(dc,"height",h)
+}
+f(i==4){
+ss pup4=id
+s(dp*4,h)
+us(dc,"height",h)
+}
+f(i==5){
+ss pup5=id
+s(dp*5,h)
+us(dc,"height",h)
+}
+f(i==6){
+ss pup6=id
+s(dp*6,h)
+us(dc,"height",h)
+}
+}
+//设置方向
+swh("pxhh",pxh)
+s(ss.st_rY-ss.st_eY,y)
+ug(dc,"height",dh)
+ug(ss.st_vW,"height",ah)
+s(pxh-y,z)
+s(z-ah,z)
+f(z&gt;dh){
+s(pxh-dh,z)
+s(z-y,z)
+s(z-ah,z)
+us(dc,"layout_marginbottom",z)
+} else {
+s(pxh-y,z)
+us(dc,"layout_marginbottom",z)
+}
+end fn
+fn pup()
+urvw(ss.pup)
+ss pup=null
+end fn
+
+//弹窗单选
+fn radio(xtit,title,show)
+endkeyboard()
+utw("",title,"null.iyu","取消",false,v){
+}
+us(v,"layout_margintop","8dp")
+nvw(o,v,"线性布局","width=-1\nheight=-2\norientation=vertical",d)
+sl(show,".",sz)
+s i=0
+for(wc;sz){
+s+(1,i)
+nvw(o,d,"线性布局","width=-1\nheight=48dp\ngravity=center_vertical\nbackground=#eeeeee\nbackgroundripple=#21000000",id)
+nvw(o,id,"单选项","text=\nchecked=false\nclickable=false\nfocusable=false\nfocusableintouchmode=false\nbackground=#00000000\nlayout_marginleft=20dp",x)
+nvw(o,id,"文本","layout_marginleft=20dp\ntextcolor=#cc000000\ntextsize=16sp",b)
+us(b,"text",wc)
+f(xtit==wc){
+us(x,"checked",true)
+}
+f(i==1){
+ss radio1=id
+}
+f(i==2){
+ss radio2=id
+}
+f(i==3){
+ss radio3=id
+}
+}
+end fn
+
+//tw
+fn tw(show)
+nvw(o,o,"线性布局","",obj)
+nvw(o,obj,"线性布局","background=#323232",d)
+swh("pxw",w)
+us(d,"width",w)
+nvw(o,d,"文本","linespacingextra=8\nlayout_margintop=14dp\nlayout_marginright=24dp\nlayout_marginbottom=10dp\nlayout_marginleft=24dp\ntextsize=14sp\ntextcolor=#ffffff",b)
+us(b,"text",show)
+call(toast,"mlua","lua.Toasts",obj)
+end fn

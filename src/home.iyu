@@ -1,0 +1,89 @@
+<View id="1" did="0" type="RelativeLayout">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="3" did="1" type="CardView">
+<ppt>width=-2
+height=-2
+app_CardcornerRadius=7dp
+app_CardElevation=0dp
+ut_alignParentRight=true
+ut_alignParentBottom=true
+layout_marginBottom=25dp
+layout_marginRight=15dp</ppt>
+<event></event>
+</View>
+<View id="7" did="3" type="LinearLayout">
+<ppt>width=-2
+height=-2
+orientation=vertical
+background=selectableitem
+clickable=true</ppt>
+<event></event>
+</View>
+<View id="4" did="7" type="LinearLayout">
+<ppt>width=170dp
+height=55dp
+orientation=vertical
+gravity=center
+backgroundcolor=#ff83b2ff</ppt>
+<event><eventItme type="clicki">/.
+开发者:JiuXia2025，QQ2025226181
+开源地址:https://github.com/JiuXia2025/Boat_Launcher
+开源协议:MIT
+个人主页:http://www.9xia.top
+注意:参考性大于实用性,因某些原因项目核心部分代码已删除,尊重劳动成果使用时请注明来自@JiuXia2025
+删除的内容:启动游戏部分(内置启动与外置启动),九夏云中心,游戏账号管理,正版登录与外置登录
+./
+fe("%Android/data/com.jiuxia.boat.launcher.pro/data/file/setting/switch.txt", 状态)
+f(状态 == true)
+{
+fr("%Android/data/com.jiuxia.boat.launcher.pro/data/file/setting/switch.txt", s)
+strim(s, s)
+f(s=="boatapp" || s=="boat launcher")
+{
+//判断布尔值开始
+f(s == "boatapp")
+{
+  //外置启动代码
+	fn md.tw("启动失败，未安装Boat程序")
+
+  
+    }
+else
+{
+  fn md.tw("启动失败，请使用外置启动模式")
+}
+//判断布尔值结束
+}
+else
+{
+fn md.tw("模式切换模块修复成功")
+fw("%Android/data/com.jiuxia.boat.launcher.pro/data/file/setting/switch.txt", "boatapp")
+}
+}
+else
+{
+fn md.tw("模式切换模块初始化成功")
+ fw("%Android/data/com.jiuxia.boat.launcher.pro/data/file/setting/switch.txt", "boatapp")
+}
+
+</eventItme></event>
+</View>
+<View id="5" did="4" type="TextView">
+<ppt>width=-2
+height=-2
+text=启动Minecraft
+textColor=#ffffff
+textSize=15sp</ppt>
+<event></event>
+</View>
+<View id="6" did="4" type="TextView">
+<ppt>width=-2
+height=-2
+text=(Boat H2O)
+textColor=#ffffff</ppt>
+<event></event>
+</View>
+<UIEventset></UIEventset>

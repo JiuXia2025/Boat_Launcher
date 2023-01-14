@@ -1,0 +1,132 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=65dp
+orientation=horizontal
+gravity=center_vertical
+background=through</ppt>
+<event><eventItme type="clicki">ulag(st_vW,5,lx)
+ulag(st_vW,4,name)
+
+ //syso(lx)
+f(lx=="返回上级")
+{
+  //点击了返回上级
+  f(ss.path=="%")
+  {
+    tw("已在根目录",0)
+  }
+  else
+  {
+    //syso(ss.path)
+    //获取上一级目录
+    slof(ss.path,"/",wz)
+    ssg(ss.path,0,wz,path)
+    f(path?"/")
+    {
+      slof(path,"/",wz)
+      ssg(path,0,wz,path)
+      ss(path+"/",path)
+    }
+    else
+    {
+      s path="%"
+    }
+    syso(path)
+    //调用模块加载列表
+    fn file_mk.readfile(path)
+  }
+}
+else f(lx=="文件夹")
+{  
+  //组合下级目录路径
+
+  ss(ss.path+name+"/",path)
+  syso(path)
+  //记忆路径
+  fw("$path.txt",path)
+  //调用模块加载列表
+  fn file_mk.readfile(path)
+}
+else
+{
+  //组合文件路径
+  ss(ss.path+name,path)
+  //选择了文件
+  utw("","你已选择文件：",name,"确定","取消",false,ha)
+  {
+f(name*?".jar")
+{
+  
+    ulag(st_vW,5,sss.filesize)
+    sss filepath=path
+    syso(sss.filepath)
+    ss(sss.filepath + "/", sss.filepath)
+    ss("%boat/gamedir/mods/" + name, jxfile)
+    fc(sss.filepath,jxfile,ssss)
+    fn md.tw("导入成功")
+	
+ 
+}
+else
+{
+	utw("null", "提示", "此文件无法导入\n请导入后缀为.jar的MOD文件", "确定", false, v)
+{
+
+}
+ 
+}
+
+    
+    
+    
+    
+    
+  }
+
+else
+
+{
+  
+  }
+  
+}</eventItme></event>
+</View>
+<View id="2" did="1" type="ImageView">
+<ppt>width=45dp
+height=40dp
+src=@file/file.png
+layout_marginleft=15dp</ppt>
+<event></event>
+</View>
+<View id="3" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=center_vertical
+paddingleft=15dp</ppt>
+<event></event>
+</View>
+<View id="4" did="3" type="TextView">
+<ppt>width=-2
+height=-2
+text=hh
+textcolor=#424242</ppt>
+<event></event>
+</View>
+<View id="5" did="3" type="TextView">
+<ppt>width=-2
+height=-2
+text=文件夹
+textsize=12dp
+layout_margintop=3dp
+textcolor=#BDBDBD</ppt>
+<event></event>
+</View>
+<View id="6" did="0" type="TextView">
+<ppt>width=-1
+height=1dp
+text=
+backgroundcolor=#EEEEEE</ppt>
+<event></event>
+</View>
+<UIEventset></UIEventset>

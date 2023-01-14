@@ -1,0 +1,152 @@
+<View id="11" did="0" type="CardView">
+<ppt>width=-1
+height=-2
+layout_marginLeft=7dp
+layout_marginRight=7dp
+layout_marginTop=10dp
+app_CardElevation=0dp
+app_CardcornerRadius=5dp
+layout_marginBottom=5dp</ppt>
+<event></event>
+</View>
+<View id="1" did="11" type="LinearLayout">
+<ppt>width=-1
+height=-2</ppt>
+<event><eventItme type="clicki">s null=null</eventItme></event>
+</View>
+<View id="2" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-1
+background=#ffffff
+backgroundripple=#21000000
+gravity=center_vertical</ppt>
+<event><eventItme type="clicki">/.
+开发者:JiuXia2025，QQ2025226181
+开源地址:https://github.com/JiuXia2025/Boat_Launcher
+开源协议:MIT
+个人主页:http://www.9xia.top
+注意:参考性大于实用性,因某些原因项目核心部分代码已删除,尊重劳动成果使用时请注明来自@JiuXia2025
+删除的内容:启动游戏部分(内置启动与外置启动),九夏云中心,游戏账号管理,正版登录与外置登录
+./
+ulag(st_vW,9,sss.bt)
+s null = "请设置游戏ID"
+f(sss.bt == null)
+{
+  //是null，不执行操作
+syso("未设置id")
+fn md.tw("请先添加游戏ID")
+}
+else
+{
+  //不是null，开始执行操作
+  fd("%Android/data/com.jiuxia.boat.launcher.pro/file/gameid.txt", fd)
+  ss("【" + sss.bt + "】", anr)
+  fw("%Android/data/com.jiuxia.boat.launcher.pro/file/gameid.txt", anr)
+  fn md.tw("设置成功")
+}
+
+
+</eventItme></event>
+</View>
+<View id="3" did="2" type="ImageView">
+<ppt>width=56dp
+height=56dp
+src=@steve.png
+layout_margin=16dp
+padding=3dp</ppt>
+<event></event>
+</View>
+<View id="4" did="2" type="LinearLayout">
+<ppt>width=-2
+height=-1
+orientation=vertical
+gravity=center_vertical
+layout_weight=1</ppt>
+<event></event>
+</View>
+<View id="5" did="4" type="TextView">
+<ppt>text=网络异常，下拉重试
+textcolor=#cc000000
+textsize=14sp
+singleline=true
+ellipsize=end
+visibility=gone</ppt>
+<event></event>
+</View>
+<View id="9" did="4" type="TextView">
+<ppt>width=-2
+height=-2
+text=请添加游戏ID
+textSize=19sp
+textColor=#000000</ppt>
+<event></event>
+</View>
+<View id="12" did="4" type="TextView">
+<ppt>width=-2
+height=-2
+text=Offline
+textSize=13sp</ppt>
+<event></event>
+</View>
+<View id="15" did="2" type="ImageView">
+<ppt>width=30dp
+height=30dp
+src=@icon_black/ic_delete_black_48dp.png
+layout_marginright=16dp
+layout_marginleft=16dp
+background=selectableitemborderless
+clickable=true</ppt>
+<event><eventItme type="clicki">/.
+开发者:JiuXia2025，QQ2025226181
+开源地址:https://github.com/JiuXia2025/Boat_Launcher
+开源协议:MIT
+个人主页:http://www.9xia.top
+注意:参考性大于实用性,因某些原因项目核心部分代码已删除,尊重劳动成果使用时请注明来自@JiuXia2025
+删除的内容:启动游戏部分(内置启动与外置启动),九夏云中心,游戏账号管理,正版登录与外置登录
+./
+ulag(st_vW,9,sss.bt)
+s null = "请设置游戏ID"
+f(sss.bt == null)
+{
+  //是null，不执行操作
+syso("未设置id")
+fn md.tw("请先添加游戏ID")
+}
+else
+{
+  //不是null，开始执行操作
+//弹框开始
+ss("您选择了：" + sss.bt + "\n是否删除？删除后不可恢复！", utwnr)
+utw("null", "提示", utwnr, "取消", "删除", false, v)
+{
+syso("取消删除")
+}
+else
+{
+//读User.txt，替换内容并去空格重新写入
+fr("%Android/data/com.jiuxia.boat.launcher.pro/file/user.txt", ruser)
+ss("【" + sss.bt + "】", dnr)
+fd("%Android/data/com.jiuxia.boat.launcher.pro/file/user.txt", fd)
+sr(ruser, dnr, "", fdok)
+strim(fdok, ok)
+fw("%Android/data/com.jiuxia.boat.launcher.pro/file/user.txt", ok)
+fn md.tw("删除成功")
+}
+//弹框结束
+
+}
+
+
+</eventItme></event>
+</View>
+<UIEventset><eventItme type="loading">gvs(st_vW,app_item.2,d)
+fn md.shadow(d)
+f(st_pN==0){
+us(d,"layout_margintop","8dp")
+gvs(st_vW,app_item.3,sss.appicon)
+
+} else {
+us(d,"layout_margintop","1dp")
+}
+
+</eventItme></UIEventset>

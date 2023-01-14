@@ -1,0 +1,63 @@
+/.
+开发者:JiuXia2025，QQ2025226181
+开源地址:https://github.com/JiuXia2025/Boat_Launcher
+开源协议:MIT
+个人主页:http://www.9xia.top
+注意:参考性大于实用性,因某些原因项目核心部分代码已删除,尊重劳动成果使用时请注明来自@JiuXia2025
+删除的内容:启动游戏部分(内置启动与外置启动),九夏云中心,游戏账号管理,正版登录与外置登录
+./
+
+/.
+Boat Launcher运行检查模块
+by.JiuXia2025
+./
+
+
+fn checklogin()
+//检查登录状态
+
+uigo("index.iyu")
+end()
+endcode
+end fn
+
+fn checklogin2()
+//检查登录状态,如登录成功则保存密码
+s a=sss.userinfo
+s user2=sss.user
+s pass2=sss.pass
+s information="{"account":"%account%","password":"%password%"}"
+json(a,u)
+
+json(u,"get","user",user)
+json(u,"get","jf",jf)
+json(u,"get","money",money)
+json(u,"get","vip_day",day)
+json(u,"get","vip_time",time)
+json(u,"get","isqd",isqd)
+json(u,"get","regtime",regtime)
+
+f(sss.userinfo == null)
+{
+	tw("登录失败，网络错误")
+    uigo("login.iyu")
+    end()
+    
+}
+else
+{
+    call(e1, "mjava", "DesEncryptor.CodeStr",user2,sss.ekey)
+    call(e2, "mjava", "DesEncryptor.CodeStr",pass2,sss.ekey)
+    sr(information, "%account%", e1, information2)
+    sr(information2, "%password%", e2, information3)
+    fw("%Android/data/com.jiuxia.boat.launcher.pro/data/file/data/information.json", information3)
+    tw("登录成功")
+	uigo("index.iyu")
+    end()
+}
+end fn
+
+
+
+
+

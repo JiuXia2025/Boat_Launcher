@@ -1,0 +1,9 @@
+
+function getColor(color)
+  import "android.graphics.*"
+  color = Color:parseColor(tos(color))
+  List = i:nsz(1,"int")
+  i:sssz(List,0,toi(color))
+  return List
+end
+

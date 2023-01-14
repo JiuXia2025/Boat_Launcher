@@ -1,0 +1,75 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-1
+.background=@bz1.jpg
+orientation=vertical
+.BackgroundColor=#a8ffffff</ppt>
+<event></event>
+</View>
+<View id="13" did="1" type="RelativeLayout">
+<ppt>width=-1
+height=-1
+layout_weight=1</ppt>
+<event></event>
+</View>
+<View id="5" did="13" type="GridView">
+<ppt>width=-1
+height=-1
+columnwidth=218dp
+.layout_gravity=center_vertical
+layout_gravity=center_vertical
+layout_marginBottom=75dp
+layout_marginTop=15dp</ppt>
+<event></event>
+</View>
+<View id="14" did="13" type="CardView">
+<ppt>width=-1
+height=-2
+app_CardcornerRadius=5dp
+layout_marginLeft=10dp
+layout_marginRight=10dp
+layout_marginBottom=25dp
+layout_marginTop=10dp
+ut_alignParentBottom=true</ppt>
+<event></event>
+</View>
+<View id="2" did="14" type="LinearLayout">
+<ppt>width=-1
+height=40dp
+gravity=center_vertical
+background=white
+.layout_marginTop=20dp
+</ppt>
+<event></event>
+</View>
+<View id="9" did="2" type="RelativeLayout">
+<ppt>width=-1
+height=-1
+background=white</ppt>
+<event></event>
+</View>
+<View id="10" did="9" type="RelativeLayout">
+<ppt>width=130dp
+height=-1
+ut_centerVertical=true
+background=selectableitem</ppt>
+<event></event>
+</View>
+<View id="11" did="10" type="ImageView">
+<ppt>width=30dp
+height=30dp
+src=@icon_gray/ic_play_arrow_grey600_48dp.png
+ut_centerVertical=true
+layout_marginLeft=10dp</ppt>
+<event></event>
+</View>
+<View id="12" did="10" type="TextView">
+<ppt>width=-2
+height=-2
+text=安装游戏
+ut_toRightOf=11
+layout_marginLeft=3dp
+ut_centerVertical=true</ppt>
+<event></event>
+</View>
+<UIEventset></UIEventset>

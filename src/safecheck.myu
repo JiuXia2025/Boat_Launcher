@@ -1,0 +1,71 @@
+/.
+开发者:JiuXia2025，QQ2025226181
+开源地址:https://github.com/JiuXia2025/Boat_Launcher
+开源协议:MIT
+个人主页:http://www.9xia.top
+注意:参考性大于实用性,因某些原因项目核心部分代码已删除,尊重劳动成果使用时请注明来自@JiuXia2025
+删除的内容:启动游戏部分(内置启动与外置启动),九夏云中心,游戏账号管理,正版登录与外置登录
+./
+//安全检测来自@canyie
+fn check()
+cls("de.robv.android.xposed.XposedBridge",klazz)
+f(klazz != null) {
+  syso("存在 Xposed 环境")
+   //java(null,null,"java.lang.System.exit","int",1)
+  }
+cls("de.robv.android.xposed.XposedBridge",klazz)
+f(klazz != null) {
+  syso("存在 Xposed 环境")
+  
+   //java(null,null,"java.lang.System.exit","int",1)
+  javass(disable,null,klazz,"disableHooks",true)
+  f(disable) {
+    syso("禁用 Xposed 成功")
+    } else {
+    syso("禁用 Xposed 失败")
+    
+    }
+  }
+java(thread,null,"java.lang.Thread.currentThread")
+java(stackTrace,thread,"java.lang.Thread.getStackTrace")
+s hasHook = false
+for(st;stackTrace) {
+  java(sts,st,"java.lang.Object.toString")
+  f(sts ? "de.robv.android.xposed." || sts ? "me.weishu.epic." || sts ? "me.weishu.exposed.") {
+    s hasHook = true
+    break
+    }
+  }
+f(hasHook) {
+  syso("存在Hook框架")
+   java(null,null,"java.lang.System.exit","int",1)
+   end()
+   endcode
+  }
+fr("/proc/self/maps",maps)
+f(maps ? "XposedBridge.jar" || maps ? "libepic.so" || maps ? "libdexposed.so" || maps ? "libsubstrate.so") {
+  syso("存在Hook框架")
+   java(null,null,"java.lang.System.exit","int",1)
+   end()
+   endcode
+  }
+java(isVxp,null,"java.lang.System.getProperty","String","vxp","String","0")
+f(isVxp == "1") {
+  syso("vxp环境")
+   java(null,null,"java.lang.System.exit","int",1)
+   end()
+   endcode
+  }
+java(filesDir,activity,"android.content.Context.getFilesDir")
+f(filesDir ? "io.va.exposed") {
+  syso("处于vxp环境")
+   java(null,null,"java.lang.System.exit","int",1)
+   end()
+   endcode
+  }
+else
+{
+  fn index.loadiyu()
+}
+
+end fn

@@ -1,0 +1,99 @@
+<View id="1" did="0" type="RelativeLayout">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="LinearLayout">
+<ppt>width=-1
+height=56dp
+gravity=center_vertical
+background=#ff83b2ff</ppt>
+<event></event>
+</View>
+<View id="3" did="2" type="ImageButton">
+<ppt>width=56dp
+height=56dp
+src=@icon_white/ic_arrow_back_white_24dp.png
+background=
+backgroundripple=#3fffffff
+scaletype=centercrop
+padding=16dp</ppt>
+<event><eventItme type="clicki">end()</eventItme></event>
+</View>
+<View id="4" did="2" type="TextView">
+<ppt>text=正在加载
+textcolor=#FFFFFF
+textsize=20sp
+layout_marginleft=16dp
+layout_marginright=16dp
+layout_weight=1
+focusable=true
+focusableintouchmode=true
+singleline=true
+ellipsize=end</ppt>
+<event></event>
+</View>
+<View id="6" did="2" type="ImageButton">
+<ppt>width=48dp
+height=48dp
+src=@icon_white/ic_more_vert_white_24dp.png
+background=
+backgroundripple=#3fffffff
+scaletype=centercrop
+padding=12dp</ppt>
+<event><eventItme type="clicki">fn md.pop("刷新.清除缓存.复制链接.在浏览器打开")
+ssj(ss.pop1,"clicki"){
+ug(8,"url",link)
+us(8,"src",link)
+fn md.pop()
+}
+
+ssj(ss.pop2,"clicki"){
+fn md.pop()
+call(pack,"mlua","lua.getPackage")
+ss("/data/data/"+pack+"/app_webview/Web Data",w)
+fd(w,z)
+fn md.tw("已清除缓存")
+}
+
+ssj(ss.pop3,"clicki"){
+ug(8,"url",link)
+sxb(link)
+fn md.pop()
+fn md.tw("已复制到粘贴板")
+}
+ssj(ss.pop4,"clicki"){
+ug(8,"url",link)
+sit(a,"action", "android.intent.action.VIEW")
+sit(a,"data",link)
+uit(a, "chooser", "执行动作的方式")
+fn md.pop()
+}</eventItme></event>
+</View>
+<View id="8" did="1" type="WebView">
+<ppt>width=-1
+height=-1
+ut_below=2</ppt>
+<event><eventItme type="onprogresschanged">swh("pxw",w)
+s(w/100*st_nS,m)
+us(7,"width",m)
+f(st_nS==100)
+{
+us(7,"visibility","gone")
+}
+</eventItme><eventItme type="shouldoverrideurlloading">us(7,"visibility","visibilit")
+us(8,"url",st_url)</eventItme><eventItme type="onpagefinished">ug(8,"title",title)
+us(4,"text",title)</eventItme><eventItme type="ondownloadstart">sit(a,"action", "android.intent.action.VIEW")
+sit(a,"data",st_url)
+uit(a, "chooser", "执行动作的方式")</eventItme><eventItme type="onreceivederror">us(4,"text","加载失败…")</eventItme></event>
+</View>
+<View id="7" did="1" type="TextView">
+<ppt>width=80dp
+height=2dp
+text=
+ut_below=2
+background=#ff83b2e1</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">fn md.top(2)
+us(8,"url",sss.web)</eventItme><eventItme type="downkey">fn md.end(st_kC)</eventItme></UIEventset>

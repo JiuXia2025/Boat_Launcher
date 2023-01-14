@@ -1,0 +1,151 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-1
+.background=@bz1.jpg
+orientation=vertical
+.BackgroundColor=#a8ffffff</ppt>
+<event></event>
+</View>
+<View id="13" did="1" type="RelativeLayout">
+<ppt>width=-1
+height=-1
+layout_weight=1</ppt>
+<event></event>
+</View>
+<View id="5" did="13" type="GridView">
+<ppt>width=-1
+height=-1
+columnwidth=218dp
+.layout_gravity=center_vertical
+layout_gravity=center_vertical
+layout_marginBottom=75dp
+layout_marginTop=15dp</ppt>
+<event></event>
+</View>
+<View id="14" did="13" type="CardView">
+<ppt>width=-1
+height=-2
+app_CardcornerRadius=5dp
+layout_marginLeft=10dp
+layout_marginRight=10dp
+layout_marginBottom=25dp
+layout_marginTop=10dp
+ut_alignParentBottom=true</ppt>
+<event></event>
+</View>
+<View id="2" did="14" type="LinearLayout">
+<ppt>width=-1
+height=40dp
+gravity=center_vertical
+background=white
+.layout_marginTop=20dp
+</ppt>
+<event></event>
+</View>
+<View id="9" did="2" type="RelativeLayout">
+<ppt>width=-1
+height=-1
+background=#009688</ppt>
+<event></event>
+</View>
+<View id="10" did="9" type="RelativeLayout">
+<ppt>width=130dp
+height=-1
+ut_centerVertical=true
+background=selectableitem</ppt>
+<event></event>
+</View>
+<View id="11" did="10" type="ImageView">
+<ppt>width=30dp
+height=30dp
+src=@icon_white/ic_add_white_48dp.png
+ut_centerVertical=true
+layout_marginLeft=10dp</ppt>
+<event></event>
+</View>
+<View id="12" did="10" type="TextView">
+<ppt>width=-2
+height=-2
+text=模组导入
+ut_toRightOf=11
+layout_marginLeft=3dp
+ut_centerVertical=true
+textColor=#ffffff</ppt>
+<event></event>
+</View>
+<View id="15" did="9" type="RelativeLayout">
+<ppt>width=130dp
+height=-1
+ut_centerVertical=true
+background=selectableitem
+layout_marginLeft=130dp</ppt>
+<event><eventItme type="clicki">/.
+开发者:JiuXia2025，QQ2025226181
+开源地址:https://github.com/JiuXia2025/Boat_Launcher
+开源协议:MIT
+个人主页:http://www.9xia.top
+注意:参考性大于实用性,因某些原因项目核心部分代码已删除,尊重劳动成果使用时请注明来自@JiuXia2025
+删除的内容:启动游戏部分(内置启动与外置启动),九夏云中心,游戏账号管理,正版登录与外置登录
+./</eventItme></event>
+</View>
+<View id="16" did="15" type="ImageView">
+<ppt>width=30dp
+height=30dp
+src=@icon_white/ic_add_white_48dp.png
+ut_centerVertical=true
+layout_marginLeft=10dp</ppt>
+<event></event>
+</View>
+<View id="17" did="15" type="TextView">
+<ppt>width=-2
+height=-2
+text=冻结模组
+ut_toRightOf=16
+layout_marginLeft=3dp
+ut_centerVertical=true
+textColor=#ffffff</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">/.
+开发者:JiuXia2025，QQ2025226181
+开源地址:https://github.com/JiuXia2025/Boat_Launcher
+开源协议:MIT
+个人主页:http://www.9xia.top
+注意:参考性大于实用性,因某些原因项目核心部分代码已删除,尊重劳动成果使用时请注明来自@JiuXia2025
+删除的内容:启动游戏部分(内置启动与外置启动),九夏云中心,游戏账号管理,正版登录与外置登录
+./
+s dir = "%boat/gamedir/mods/"
+
+fl(dir,true,a)
+
+for(b;a)
+{
+ula(c,2="@file/file.png",5=b)
+}
+
+uls(5,c,"f2.iyu","220dp",-2)
+
+fl(dir,false,a)
+
+for(b;a)
+{
+
+}
+
+uls(5,c,"f2.iyu","220dp",-2)
+
+
+fl(dir,false,a)
+
+for(b;a)
+{
+
+f(b*?".jar")
+{
+ula(c,2="@file/zip.png",5=b)
+}
+}
+
+uls(5,c,"f2.iyu","220dp",-2)
+
+</eventItme></UIEventset>

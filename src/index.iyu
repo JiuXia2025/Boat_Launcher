@@ -1,0 +1,708 @@
+<View id="7" did="0" type="RelativeLayout">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="8" did="7" type="ImageView">
+<ppt>width=-1
+height=-1
+.src=@background.jpg
+scaleType=centercrop</ppt>
+<event></event>
+</View>
+<View id="5" did="7" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=horizontal</ppt>
+<event></event>
+</View>
+<View id="1" did="5" type="LinearLayout">
+<ppt>width=90dp
+height=-1
+orientation=vertical
+.BackgroundColor=#a8ffffff
+.background=white</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+background=#ff83b2ff</ppt>
+<event></event>
+</View>
+<View id="3" did="2" type="LinearLayout">
+<ppt>width=-1
+height=20dp
+background=#20000000
+.visibility=gone</ppt>
+<event></event>
+</View>
+<View id="4" did="2" type="LinearLayout">
+<ppt>width=-1
+height=40dp
+gravity=center
+.visibility=gone</ppt>
+<event></event>
+</View>
+<View id="14" did="4" type="TextView">
+<ppt>width=-2
+height=-2
+text=MCBL
+textColor=#ffffff
+textSize=15sp
+textStyle=bold
+.visibility=gone</ppt>
+<event></event>
+</View>
+<View id="55" did="1" type="CardView">
+<ppt>width=65dp
+height=-1
+app_CardcornerRadius=7dp
+layout_marginTop=25dp
+layout_marginBottom=25dp
+layout_marginLeft=10dp</ppt>
+<event></event>
+</View>
+<View id="57" did="55" type="ScrollView">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="56" did="57" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="20" did="56" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+layout_marginBottom=5dp</ppt>
+<event></event>
+</View>
+<View id="25" did="20" type="LinearLayout">
+<ppt>width=-1
+height=50dp
+orientation=horizontal
+gravity=center_vertical
+background=selectableitemborderless
+layout_marginTop=15dp</ppt>
+<event><eventItme type="clicki">/.
+开发者:JiuXia2025，QQ2025226181
+开源地址:https://github.com/JiuXia2025/Boat_Launcher
+开源协议:MIT
+个人主页:http://www.9xia.top
+注意:参考性大于实用性,因某些原因项目核心部分代码已删除,尊重劳动成果使用时请注明来自@JiuXia2025
+删除的内容:启动游戏部分(内置启动与外置启动),九夏云中心,游戏账号管理,正版登录与外置登录
+./
+
+//加载列表
+t()
+{
+fr("@test.txt",dm)
+sj(dm,"&lt;",null,dm)
+sl(dm,"&lt;",dm)
+for(dms;dm)
+{
+sj(dms,null,"&gt;",dmtitle)
+sj(dms,"&gt;",null,dmshow)
+json(dmshow, jo)
+json(jo, "get", "gamemode", gamemode)
+fr("%Android/data/com.jiuxia.boat.launcher.pro/data/file/resources/avatar.txt",t1)
+ula(dm,1=null,2=null,3=null,9=dmtitle,12=gamemode,6=null)
+}
+ufnsui()
+{
+uls(b.23,dm,"app_list.iyu",-1,-2)
+}
+}
+
+
+
+
+
+
+
+fe("%Android/data/com.jiuxia.boat.launcher.pro/file/gameid.txt", rgameids)
+f(rgameids == "true")
+{
+fr("%Android/data/com.jiuxia.boat.launcher.pro/file/gameid.txt", rgameid)
+sr(rgameid, "【", "", rgameid)
+sr(rgameid, "】", "", rgameid)
+strim(rgameid, rgameid)
+ss("您选择的ID：" + rgameid, gameid)
+us(b.18, "text", gameid)
+}
+else
+{
+us(b.18, "text", "未选择游戏ID")
+}
+
+
+us(home.1,"visibility","gone")
+us(a.1,"visibility","gone")
+us(set.1,"visibility","gone")
+us(b.1,"visibility","visible")
+us(c.1,"visibility","gone")
+us(d.1,"visibility","gone")
+us(mod.1,"visibility","gone")
+dha(dh, false, true)
+dh(dh, "duration", 500)
+us(b.1, "dh", dh)
+us(17, "text", "账号管理")</eventItme></event>
+</View>
+<View id="61" did="25" type="RelativeLayout">
+<ppt>width=-2
+height=-2</ppt>
+<event></event>
+</View>
+<View id="62" did="61" type="ImageView">
+<ppt>width=35dp
+height=35dp
+.src=@jiuxia.png
+.visibility=gone
+layout_marginLeft=15dp</ppt>
+<event></event>
+</View>
+<View id="26" did="61" type="RoundImageView">
+<ppt>width=35dp
+height=35dp
+.src=@steve.png
+.visibility=gone
+layout_marginLeft=15dp</ppt>
+<event></event>
+</View>
+<View id="32" did="20" type="LinearLayout">
+<ppt>width=-1
+height=50dp
+orientation=horizontal
+gravity=center_vertical
+.background=selectableitemborderless
+layout_marginTop=15dp</ppt>
+<event></event>
+</View>
+<View id="53" did="32" type="RelativeLayout">
+<ppt>width=-1
+height=-1
+background=selectableitemborderless
+.layout_marginTop=15dp
+clickable=true</ppt>
+<event><eventItme type="clicki">/.
+开发者:JiuXia2025，QQ2025226181
+开源地址:https://github.com/JiuXia2025/Boat_Launcher
+开源协议:MIT
+个人主页:http://www.9xia.top
+注意:参考性大于实用性,因某些原因项目核心部分代码已删除,尊重劳动成果使用时请注明来自@JiuXia2025
+删除的内容:启动游戏部分(内置启动与外置启动),九夏云中心,游戏账号管理,正版登录与外置登录
+./
+//MCBL内存管理模块 @JiuXia2025
+fe("%Android/data/com.jiuxia.boat.launcher.pro/data/file/data/ram.txt",rams)
+f(rams == "true")
+{
+	fr("%Android/data/com.jiuxia.boat.launcher.pro/data/file/data/ram.txt",rram)
+    us(c.33, "text", rram)
+}
+else
+{
+	syso("[layout.c]Ram配置文件不存在，获取信息失败")
+}
+
+
+
+
+//读取内存大小
+fr("/proc/meminfo",ram)
+sj(ram,"MemTotal:","MemFree:",ram)
+s ramkb=ram
+strim(ramkb, ramkb)
+sr(ram,"kB"," ",ram)
+strim(ram, ram)
+s(ram / 1024, ram)
+s(ram / 1024 + 1, ram)
+ss("物理内存大小：" + ram + "GB", raminfo)
+us(c.32, "text", raminfo)
+
+
+us(home.1,"visibility","gone")
+us(a.1,"visibility","gone")
+us(set.1,"visibility","gone")
+us(b.1,"visibility","gone")
+us(mod.1,"visibility","gone")
+us(c.1,"visibility","visible")
+us(d.1,"visibility","gone")
+dha(dh, false, true)
+dh(dh, "duration", 500)
+us(c.1, "dh", dh)
+us(17, "text", "游戏设置")
+end fn
+</eventItme></event>
+</View>
+<View id="54" did="53" type="ImageView">
+<ppt>width=35dp
+height=35dp
+src=@furnace.png
+layout_marginLeft=15dp
+ut_centerVertical=true</ppt>
+<event></event>
+</View>
+<View id="35" did="20" type="LinearLayout">
+<ppt>width=-1
+height=50dp
+orientation=horizontal
+gravity=center_vertical
+background=selectableitemborderless
+layout_marginTop=15dp</ppt>
+<event><eventItme type="clicki">/.
+开发者:JiuXia2025，QQ2025226181
+开源地址:https://github.com/JiuXia2025/Boat_Launcher
+开源协议:MIT
+个人主页:http://www.9xia.top
+注意:参考性大于实用性,因某些原因项目核心部分代码已删除,尊重劳动成果使用时请注明来自@JiuXia2025
+删除的内容:启动游戏部分(内置启动与外置启动),九夏云中心,游戏账号管理,正版登录与外置登录
+./
+s dir = "%boat/gamedir/versions/"
+
+fl(dir,true,a)
+
+for(b;a)
+{
+ula(c,2="@icon_file/ic_folder_open_grey600_48dp.png",5=b)
+}
+
+uls(a.5,c,"f.iyu","220dp",-2)
+
+fl(dir,false,a)
+for(b;a)
+{
+}
+
+uls(a.5,c,"f.iyu","220dp",-2)
+
+us(home.1,"visibility","gone")
+us(a.1,"visibility","visible")
+us(set.1,"visibility","gone")
+us(b.1,"visibility","gone")
+us(c.1,"visibility","gone")
+us(d.1,"visibility","gone")
+us(mod.1,"visibility","gone")
+dha(dh, false, true)
+dh(dh, "duration", 500)
+us(a.1, "dh", dh)
+us(17, "text", "游戏版本列表")</eventItme></event>
+</View>
+<View id="36" did="35" type="ImageView">
+<ppt>width=35dp
+height=35dp
+src=@bookshelf.png
+layout_marginLeft=15dp</ppt>
+<event></event>
+</View>
+<View id="42" did="20" type="LinearLayout">
+<ppt>width=-1
+height=50dp
+orientation=horizontal
+gravity=center_vertical
+background=selectableitemborderless
+layout_marginTop=15dp
+visibility=gone</ppt>
+<event></event>
+</View>
+<View id="43" did="42" type="ImageView">
+<ppt>width=35dp
+height=35dp
+src=@craft_table.png
+layout_marginLeft=15dp</ppt>
+<event></event>
+</View>
+<View id="49" did="20" type="LinearLayout">
+<ppt>width=-1
+height=50dp
+orientation=horizontal
+gravity=center_vertical
+background=selectableitemborderless
+layout_marginTop=15dp</ppt>
+<event><eventItme type="clicki">/.
+开发者:JiuXia2025，QQ2025226181
+开源地址:https://github.com/JiuXia2025/Boat_Launcher
+开源协议:MIT
+个人主页:http://www.9xia.top
+注意:参考性大于实用性,因某些原因项目核心部分代码已删除,尊重劳动成果使用时请注明来自@JiuXia2025
+删除的内容:启动游戏部分(内置启动与外置启动),九夏云中心,游戏账号管理,正版登录与外置登录
+./
+fe("%Android/data/com.jiuxia.boat.launcher.pro/data/file/resources/avatar.txt",t1)
+f(t1 == "true")
+{
+	 fr("%Android/data/com.jiuxia.boat.launcher.pro/data/file/resources/avatar.txt",t1)
+     us(set.33, "text", t1)
+}
+else
+{
+	syso("[layout.set]配置文件不存在，获取信息失败")
+}
+
+fe("%Android/data/com.jiuxia.boat.launcher.pro/data/file/resources/background.txt",t2)
+f(t2 == "true")
+{
+	 fr("%Android/data/com.jiuxia.boat.launcher.pro/data/file/resources/background.txt",t2)
+     us(set.43, "text", t2)
+}
+else
+{
+	syso("[layout.set]配置文件不存在，获取信息失败")
+}
+
+
+
+
+fe("%Android/data/com.jiuxia.boat.launcher.pro/data/file/setting/switch.txt", 状态)
+f(状态 == true)
+{
+fr("%Android/data/com.jiuxia.boat.launcher.pro/data/file/setting/switch.txt", s)
+strim(s, s)
+f(s=="boatapp" || s=="boat launcher")
+{
+//判断布尔值开始
+f(s == "boatapp")
+{
+  us(set.67,"checked",true)
+  us(set.71,"checked",false)
+  //fw("%Android/data/com.jiuxia.boat.launcher.pro/data/file/setting/switch.txt", "boatapp")
+}
+else
+{
+  us(set.67,"checked",false)
+  us(set.71,"checked",true)
+  //fw("%Android/data/com.jiuxia.boat.launcher.pro/data/file/setting/switch.txt", "boat launcher")
+
+}
+//判断布尔值结束
+}
+else
+{
+fn md.tw("模式切换模块修复成功")
+fw("%Android/data/com.jiuxia.boat.launcher.pro/data/file/setting/switch.txt", "boatapp")
+}
+}
+else
+{
+fn md.tw("模式切换模块初始化成功")
+ fw("%Android/data/com.jiuxia.boat.launcher.pro/data/file/setting/switch.txt", "boatapp")
+}
+
+
+
+us(a.1,"visibility","gone")
+us(b.1,"visibility","gone")
+us(c.1,"visibility","gone")
+us(d.1,"visibility","gone")
+us(home.1,"visibility","gone")
+us(mod.1,"visibility","gone")
+us(set.1,"visibility","visible")
+dha(dh, false, true)
+dh(dh, "duration", 500)
+us(set.1, "dh", dh)
+dha(dh, false, true)
+dh(dh, "duration", 500)
+us(set.1, "dh", dh)
+us(17, "text", "启动器设置")
+</eventItme></event>
+</View>
+<View id="50" did="49" type="ImageView">
+<ppt>width=35dp
+height=35dp
+src=@command.png
+layout_marginLeft=15dp</ppt>
+<event></event>
+</View>
+<View id="6" did="5" type="LinearLayout">
+<ppt>width=1
+height=-1
+orientation=vertical
+background=#6c6c6c
+visibility=gone</ppt>
+<event></event>
+</View>
+<View id="10" did="5" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="11" did="10" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+background=#ff83b2ff</ppt>
+<event></event>
+</View>
+<View id="12" did="11" type="LinearLayout">
+<ppt>width=-1
+height=20dp
+background=#20000000</ppt>
+<event></event>
+</View>
+<View id="13" did="11" type="LinearLayout">
+<ppt>width=-1
+height=40dp
+gravity=center_vertical</ppt>
+<event></event>
+</View>
+<View id="15" did="13" type="ImageView">
+<ppt>width=25dp
+height=25dp
+src=@ic_arrow_back_white_48dp.png
+layout_marginLeft=10dp
+background=selectableitemborderless
+clickable=true</ppt>
+<event></event>
+</View>
+<View id="16" did="13" type="ImageView">
+<ppt>width=24dp
+height=24dp
+src=@ic_home_white_48dp.png
+layout_marginLeft=10dp
+background=selectableitemborderless
+clickable=true</ppt>
+<event><eventItme type="clicki">/.
+开发者:JiuXia2025，QQ2025226181
+开源地址:https://github.com/JiuXia2025/Boat_Launcher
+开源协议:MIT
+个人主页:http://www.9xia.top
+注意:参考性大于实用性,因某些原因项目核心部分代码已删除,尊重劳动成果使用时请注明来自@JiuXia2025
+删除的内容:启动游戏部分(内置启动与外置启动),九夏云中心,游戏账号管理,正版登录与外置登录
+./
+us(home.1,"visibility","visible")
+dha(dh, false, true)
+dh(dh, "duration", 500)
+us(home.1, "dh", dh)
+us(a.1,"visibility","gone")
+us(b.1,"visibility","gone")
+us(c.1,"visibility","gone")
+us(set.1,"visibility","gone")
+us(mod.1,"visibility","gone")
+us(17, "text", "首页")
+
+fn mcbl.CheckMode()</eventItme></event>
+</View>
+<View id="17" did="13" type="TextView">
+<ppt>width=-1
+height=-2
+text=首页
+textColor=#ffffff
+textSize=18sp
+textStyle=bold
+layout_marginLeft=10dp
+layout_weight=1
+.visibility=gone</ppt>
+<event></event>
+</View>
+<View id="18" did="13" type="ImageView">
+<ppt>width=25dp
+height=25dp
+src=@ic_close_white_48dp.png
+layout_marginRight=10dp
+background=selectableitemborderless</ppt>
+<event><eventItme type="clicki">/.
+开发者:JiuXia2025，QQ2025226181
+开源地址:https://github.com/JiuXia2025/Boat_Launcher
+开源协议:MIT
+个人主页:http://www.9xia.top
+注意:参考性大于实用性,因某些原因项目核心部分代码已删除,尊重劳动成果使用时请注明来自@JiuXia2025
+删除的内容:启动游戏部分(内置启动与外置启动),九夏云中心,游戏账号管理,正版登录与外置登录
+./
+utw("@craft_table.png", "提示", "\n 确定要退出启动器？", "确定", "取消", false, v)
+{
+end()
+}
+else
+{
+}</eventItme></event>
+</View>
+<View id="52" did="10" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="onactivityresult">/.
+开发者:JiuXia2025，QQ2025226181
+开源地址:https://github.com/JiuXia2025/Boat_Launcher
+开源协议:MIT
+个人主页:http://www.9xia.top
+注意:参考性大于实用性,因某些原因项目核心部分代码已删除,尊重劳动成果使用时请注明来自@JiuXia2025
+删除的内容:启动游戏部分(内置启动与外置启动),九夏云中心,游戏账号管理,正版登录与外置登录
+./
+javags(er,activity,"android.app.Activity","RESULT_OK")
+f(st_lC==er)
+{
+  f(st_sC==1)
+  {
+    java(uri,st_iT,"android.content.Intent.getData")
+    call(path, "mjava", "uri.getRealPath", activity, uri)
+    syso(path)
+    us(set.33, "text", path)
+  }
+}
+
+
+
+
+javags(er,activity,"android.app.Activity","RESULT_OK")
+f(st_lC==er)
+{
+  f(st_sC==2)
+  {
+    java(uri,st_iT,"android.content.Intent.getData")
+    call(path, "mjava", "uri.getRealPath", activity, uri)
+    syso(path)
+    us(set.43, "text", path)
+  }
+}
+
+
+
+
+</eventItme><eventItme type="loadingComplete">/.
+开发者:JiuXia2025，QQ2025226181
+开源地址:https://github.com/JiuXia2025/Boat_Launcher
+开源协议:MIT
+个人主页:http://www.9xia.top
+注意:参考性大于实用性,因某些原因项目核心部分代码已删除,尊重劳动成果使用时请注明来自@JiuXia2025
+删除的内容:启动游戏部分(内置启动与外置启动),九夏云中心,游戏账号管理,正版登录与外置登录
+./
+//加载头像设置
+fe("%Android/data/com.jiuxia.boat.launcher.pro/data/file/setting/avatar.txt", 状态)
+f(状态 == true)
+{
+fr("%Android/data/com.jiuxia.boat.launcher.pro/data/file/setting/avatar.txt", s)
+strim(s, s)
+f(s=="square" || s=="circular")
+{
+//判断布尔值开始
+syso("true或false")
+f(s == "square")
+{
+  us(62, "visibility", "visible")
+  us(26, "visibility", "gone")
+  us(set.52,"checked",false)
+}
+else
+{
+   us(62, "visibility", "gone")
+   us(26, "visibility", "visible")
+   us(set.52,"checked",true)
+}
+//判断布尔值结束
+}
+else
+{
+fn md.tw("头像切换模块修复成功")
+fw("%Android/data/com.jiuxia.boat.launcher.pro/data/file/setting/avatar.txt", "square")
+}
+}
+else
+{
+fn md.tw("头像切换模块初始化成功")
+ fw("%Android/data/com.jiuxia.boat.launcher.p/data/file/setting/avatar.txt", "square")
+}
+
+//内置与外置启动检查
+fe("%Android/data/com.jiuxia.boat.launcher.pro/data/file/setting/switch.txt", 状态)
+f(状态 == true)
+{
+fr("%Android/data/com.jiuxia.boat.launcher.pro/data/file/setting/switch.txt", s)
+strim(s, s)
+f(s=="boatapp" || s=="boat launcher")
+{
+//判断布尔值开始
+syso("true或false")
+f(s == "boatapp")
+{
+  us(home.6,"text","&lt;外置启动&gt;")
+  us(set.71,"checked",false)
+  //fw("%Android/data/com.jiuxia.boat.launcher.pro/data/file/setting/switch.txt", "boatapp")
+}
+else
+{
+  us(home.6,"text","&lt;内置启动&gt;")
+  //fw("%Android/data/com.jiuxia.boat.launcher.pro/data/file/setting/switch.txt", "boat launcher")
+
+}
+//判断布尔值结束
+}
+else
+{
+fn md.tw("模式切换模块修复成功")
+fw("%Android/data/com.jiuxia.boat.launcher.pro/data/file/setting/switch.txt", "boatapp")
+}
+}
+else
+{
+fn md.tw("模式切换模块初始化成功")
+ fw("%Android/data/com.jiuxia.boat.launcher.pro/data/file/setting/switch.txt", "boatapp")
+}
+
+fe("%Android/data/com.jiuxia.boat.launcher.pro/data/file/resources/avatar.txt",t1)
+f(t1 == "true")
+{
+	 fr("%Android/data/com.jiuxia.boat.launcher.pro/data/file/resources/avatar.txt",t1)
+     us(62, "src", t1)
+     us(26, "src", t1)
+}
+else
+{
+	syso("[layout.set]配置文件不存在，获取信息失败")
+}
+
+fe("%Android/data/com.jiuxia.boat.launcher.pro/data/file/resources/background.txt",t2)
+f(t2 == "true")
+{
+	 fr("%Android/data/com.jiuxia.boat.launcher.pro/data/file/resources/background.txt",t2)
+     us(8, "src", t2)
+}
+else
+{
+	syso("[layout.set]配置文件不存在，获取信息失败")
+}
+</eventItme><eventItme type="loading">/.
+开发者:JiuXia2025，QQ2025226181
+开源地址:https://github.com/JiuXia2025/Boat_Launcher
+开源协议:MIT
+个人主页:http://www.9xia.top
+注意:参考性大于实用性,因某些原因项目核心部分代码已删除,尊重劳动成果使用时请注明来自@JiuXia2025
+删除的内容:启动游戏部分(内置启动与外置启动),九夏云中心,游戏账号管理,正版登录与外置登录
+./
+fn image.background()
+fn image.tu()
+//开启横屏
+ushsp(true)
+
+//状态栏沉浸
+java(cs,activity,"android.app.Activity.getWindow")
+java(cs2,cs,"android.view.Window.getDecorView")
+java(null,cs,"android.view.Window.addFlags","int","67108864")
+
+//状态栏高度
+swh("pxhh",pxhh)
+swh("pxh",pxh)
+s(pxhh-pxh,ztl)
+us(3,"height",ztl)
+us(12,"height",ztl)
+
+//可以变换界面
+addv(52,"home.iyu")
+addv(52,"a.iyu")
+addv(52,"b.iyu")
+addv(52,"c.iyu")
+addv(52,"d.iyu")
+addv(52,"set.iyu")
+addv(52,"mod.iyu")
+us(a.1,"visibility","gone")
+us(b.1,"visibility","gone")
+us(c.1,"visibility","gone")
+us(d.1,"visibility","gone")
+us(set.1,"visibility","gone")
+us(mod.1,"visibility","gone")
+</eventItme></UIEventset>
