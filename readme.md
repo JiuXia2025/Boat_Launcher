@@ -8,7 +8,7 @@ Boat得益于开源社区的持续发展，许许多多开发者都参与进来�
 
 喜欢的话可以帮忙给此仓库点个star支持一下
 ## 关于
-主要开发者：[@JiuXia2025](http://www.9xia.top "个人主页")，[@SKYRE](http://www.skyre.cn "个人主页")
+主要开发者：[@JiuXia2025](https://www.inekoxia.com "个人主页")，[@SKYRE](http://www.skyre.cn "个人主页")
 
 ### 引用：
 
