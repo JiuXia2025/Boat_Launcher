@@ -6,6 +6,7 @@ Boat得益于开源社区的持续发展，许许多多开发者都参与进来�
 
 因为APP新规的实施所有APP需要办理备案号，所以酷安把BL启动器下架了，现已补档在本仓库的[releases](https://github.com/JiuXia2025/Boat_Launcher/releases "下载页")页面里供大家下载。
 
+喜欢的话可以帮忙点个star支持一下
 ## 关于
 主要开发者：[@JiuXia2025](http://www.9xia.top "个人主页")，[@SKYRE](http://www.skyre.cn "个人主页")
 
